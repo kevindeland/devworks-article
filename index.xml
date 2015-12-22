@@ -220,81 +220,26 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
 
             <p>In this installment of "Making Watson a Rock Star", we will use the Watson Language Translation service to translate the lyrics of popular songs into Spanish, to help English-speaking users improve their Spanish in a way that is fun, engaging, and memorable.</p>
 
-            <!-- IBM-TOOLTIP - OPTIONAL -->
-            <!-- You can use the ibm-tooltip class to define a term in context.  Put the
-                definition in the title attribute.  The defined term will then appear with
-                a dotted underscore, and on hover, the definition will pop up. -->
-<!--            <p>I chose to build it as a <a class="ibm-tooltip"
-                    title="Platform as a Service: Runtime environment that helps developers build and deploy web applications on a hosted infrastructure"
-                    >PaaS</a> app, using JavaScript and the popular Node.js
-                runtime for PaaS apps. The app uses the service-composition
-                programming model supported by PaaS environments like <a
-                    class="ibm-tooltip"
-                    title="An interoperable Platform as a Service framework that gives users freedom of choice across cloud infrastructure and application programming models"
-                    >Cloud Foundry</a> and <a class="ibm-tooltip"
-                    title="A cloud Platform as a Service that supports Node.js among other programming languages"
-                    >Heroku</a>. I settled on developing this app at JazzHub.
-                This provides me with a place to publish the application, as
-                well as a nice browser-based IDE to develop the code.</p>
--->
-            <!-- CALLS TO ACTION - OPTIONAL, BUT STRONGLY RECOMMENDED -->
-            <!-- Your article should have at least one call to action. If you have a two calls to action, use the
-                <button-block-two-column> element, shown below.  If you have a single call to action, use the 
-                <button-link> element with a blue button-style.
-                Examples:
-                "Run the app"
-                "Get the code at JazzHub"
-                "Evaluate <IBM product>"
-                "Download <IBM product>"
-                "Develop in the cloud at JazzHub"
-               -->
+
             <button-block-two-column>
-                <first-column>
-                    <button-link button-style="blue">
-                        <text>Run the app</text>
-                        <url>http://cuantos-caminos.mybluemix.net/</url>
-                    </button-link>
-                </first-column>
-                <second-column>
-                    <button-link button-style="blue">
-                        <text>Get the code at GitHub</text>
-                        <url>https://hub.jazz.net/project/srich/Sentiment%20Analysis%20App</url><!-- TODO -->
-                    </button-link>
-                </second-column>
+              <first-column>
+                <button-link button-style="blue">
+                  <text>Run the app</text>
+                  <url>http://cuantos-caminos.mybluemix.net/</url>
+                </button-link>
+              </first-column>
+              <second-column>
+                <button-link button-style="blue">
+                  <text>Get the code at GitHub</text>
+                  <url>https://hub.jazz.net/project/srich/Sentiment%20Analysis%20App</url><!-- TODO -->
+                </button-link>
+              </second-column>
             </button-block-two-column>
 
-            <!--  HEADINGS  
-For authors:  You can use four levels of headings: h2 down to h5.  Try to make your first 
-heading "What you'll need..." and summarize the prerequisite software, knowledge, skills, 
-or experience the reader will need to get the most benefit from your article. 
-
-If you need to refer to a heading, fill in the refname attribute (and make sure 
-all refnames in this article are unique).  Otherwise, leave refname blank. 
-Leave the back-to-top value set to "no" for each heading. 
-            
-For editors:  When you edit the author's final submission, manually add and 
-increment the inline-commenting-id values on all type-h2 and type-h3 headings.
-IMPORTANT:  
-1) The id MUST begin with characters: cmt_ 
-We recommend you follow those characters with a number, as shown below.  
-Note that id values must be unique.  Numbers do not need to be sequential.
-2) If you update and republish the article, DO NOT CHANGE any 
-of the inline-commenting-id values; doing so will disrupt any comments that have 
-already been submitted. -->
 
             <heading refname="" type="h2" back-to-top="no"
                 inline-commenting-id="cmt_1">What you'll need to build a similar
                 app</heading>
-            <!-- LIST  
-For authors: You can include ordered (ol) and unordered (ul) lists in your article.  
-If you have an ordered list interrupted by a heading and want the numbering to 
-continue, use the start attribute. For example, to resume the list at number 6, 
-use <ol start="6">.  Do not include lists inside paragraph elements; rather, end the 
-paragraph before you start a list. -->
-
-            <!--For authors: When linking to other content, link to immediately relevant content 
-in the sentence (do not create or refer to a separate "Resources" section at the end of 
-the article). -->
 
             <ol>
               <li>A Bluemix account</li>
@@ -343,42 +288,7 @@ object, method, code snippet, or anything the user types in) in a sentence using
 the <code> element for monospace font.  Within the <code> element, you can 
 have up to 105 consecutive characters without a space. -->
             <ol>
-              <li>Run the <code>node</code> and <code>npm</code> commands: <!-- FIGURE 
-For authors:  You can include graphics in the sections of an article.
-
-Include a <heading> element to provide a caption for each figure.  If
-auto-number="yes" is specified on the <dw-article> element, your 
-heading text will be prefixed with the word "Figure" and the figure 
-number, such as "Figure 1. " or "Figure 2. ".
-
-The alt attribute on the img tag is required and should contain a brief, 
-meaningful description of the image for a visually impaired user (limit is 130 
-characters). Avoid embedding text inside images, as it cannot be read by 
-screen readers. If you cannot avoid including text in an image, include the 
-same text as part of the alt text, or in the text surrounding the image. Also, 
-pay attention to the use of color in images. To ensure your graphic meets 
-accessibility requirements, do not use color as the only method of conveying 
-meaning. Color can emphasize a point for a sighted user, but should not be 
-the only means of conveying a message.
-
-Images should be in gif, jpg, or png format, and no wider than is needed to convey 
-a concept, up to a maximum of 850 pixels, as shown in Figure 1. If the width 
-attribute of your image is greater than 850, the stylesheet will display an error 
-message in the HTML output instead of your image. If you include the figure 
-in a list, such as a screenshot in a numbered procedure, the maximum width 
-is determined by the level of nesting. Code the figure inside 
-the list item, like this: 
-<ol>
-        <li>Select the Java Beans view, as shown in the following figure: 
-            <figure>
-                        <heading refname="fig1">Confirming that Node.js and NPM are set up
-                            on your system</heading>
-                        <img alt="Screen shot of running the node and npm commands" height="79" src="fig1.jpg" width="450"/>
-                    </figure>
-        </li>
-</ol>   
-For additional advice, see "Illustrating your article or tutorial for developerWorks" 
-at: http://www.ibm.com/developerworks/library/i-dwgraphics/ -->
+              <li>Run the <code>node</code> and <code>npm</code> commands: 
                     <figure>
                         <heading refname="fig1">Confirming that Node.js and NPM
                             are set up on your system</heading>
@@ -401,33 +311,7 @@ at: http://www.ibm.com/developerworks/library/i-dwgraphics/ -->
                         such as defaulting the content type and length. When
                         using Express, we can ignore some of the details of the
                         underlying HTTP conversation.</p>
-                    <!-- CODE LISTING
-For authors: You can include code listings to illustrate your points. 
-Limit the width of code lines to no more than 105 characters. If you preview the 
-content, any code line that exceeds the maximum available width (105 characters) 
-will be displayed in an overlay or "pop-up" window. Long lines do not 
-autowrap, so check your code listings carefully and correct as 
-needed. When counting characters, count blanks. Count 
-symbols or character entities like "&lt;" and "&quot;" as a 
-single character.
-
-Avoid hard-coding blank spaces or tabs at the end of a line of sample code.
-Avoid using tabs at the beginning of a line of sample code. If you must indent, 
-use blank spaces. Do not use CDATA tags. If you need to display XML tags, 
-such as angle brackets, in your sample code, use &lt; and &gt;. Do not use 
-color. If you want to highlight a portion of your sample code, use strong
-(<strong> and </strong>) instead.
-
-For the code listing itself, type or paste in ASCII code with proper keyboard 
-spacing. Use the space key to indent lines. Use &lt; to represent a less-than 
-symbol and &gt; to represent a greater-than symbol. Use &amp; for an 
-ampersand.  If needed for emphasis, use <strong> and </strong> 
-as shown below. 
-
-Include a <heading> element to provide a caption for each code listing.  If
-auto-number="yes" is specified on the <dw-article> element, your heading text 
-will be prefixed with the word "Listing" and the listing number, such as 
-"Listing 1. " or "Listing 2. ".  -->
+                
                     <code-listing>
                         <heading refname="listing1">Hello Node.js</heading>
                         <pre>
