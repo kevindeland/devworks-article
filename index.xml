@@ -289,37 +289,72 @@ the <code> element for monospace font.  Within the <code> element, you can
 have up to 105 consecutive characters without a space. -->
             <ol>
               <li>Run the <code>node</code> and <code>npm</code> commands: 
-              <figure>
-                <heading refname="fig1">Confirming that Node.js and NPM
-                are set up on your system</heading>
-                <img
-                    alt="Screen shot of running the node and npm commands"
-                    height="79" src="fig1.jpg" width="450"/>
-              </figure>
               </li>
 
-              <li>Create the simplest Node.js Express app possible: Hello
-              Node.js (see <xref href="#listing1"/>). <p>In a new
-              directory, create the app.js file, the main file of the
-              Node.js app. Tell Node.js that the Express module is
-              required, and create the Express app. Register a route
-              so that requests for <code>/hello</code> will be handled
-              by the anonymous function shown in <xref
-              href="#listing1"/>. The handler for
-              <code>/hello</code> uses the Express helpers to send a
-              simple text response. The send method handles details
-              such as defaulting the content type and length. When
+              <li>
+                Create the simplest Node.js Express app possible: Hello
+                Node.js (see <xref href="#listing1"/>).
+                <p>In a new directory, create the app.js file, the main file of the
+                Node.js app. Tell Node.js that the Express module is
+                required, and create the Express app. Register a route
+                so that requests for <code>/hello</code> will be handled
+                by the anonymous function shown in <xref
+                href="#listing1"/>. The handler for
+                <code>/hello</code> uses the Express helpers to send a
+                simple text response. The send method handles details
+                such as defaulting the content type and length. When
               using Express, we can ignore some of the details of the
               underlying HTTP conversation.</p>
-              
-              
-              
               </li>
 
+              <li>                 
+                    <code-listing>
+                        <heading refname="listing1">Hello Node.js</heading>
+                        <pre>
+var port = (process.env.VCAP_APP_PORT || 3000);
+var express = require("express");
+
+var app = express();
+
+app.get('/hello', function(req, res) {
+    res.send("Hello world.");
+});
+
+app.listen(port);
+console.log("Server listening on port " + port);
+</pre>
+                    </code-listing>
+            
+              </li>
+
+              <li>Give Node.js some additional information about the app, as
+                    shown in <xref href="#listing2"/>. <p> Create a
+                        <code>package.json</code> file to tell the app that the
+                        Express module will be used, and name the app "Simple
+                        Sentiment Analysis App." Since this app is not intended
+                        to be published to the NPM registry, you can mark it as
+                        private. Finally, declare that the app depends on a 3.x
+                        version of the Express module.</p>
+                    <code-listing>
+                        <heading refname="listing2">package.json</heading>
+                        <pre>
+package.json for Hello Node
+{
+  "name": "SimpleSentimentAnalysisApp",
+  "description": "Simple Sentiment Analysis App",
+  "version": "0.9.0",
+  "private": true,
+  "dependencies": {
+    "express": "3.x"
+  }
+}
+</pre>
+                    </code-listing>
+                </li>
+              
             </ol>
-                 
-            
-            
+                          
+         
             <heading refname="" type="h2" back-to-top="no"
                 inline-commenting-id="cmt_4">Step 2. Create an app in Bluemix and bind it to a Watson Language Translation service</heading>
 
@@ -333,128 +368,7 @@ have up to 105 consecutive characters without a space. -->
             <heading refname="" type="h2" back-to-top="no"
                 inline-commenting-id="cmt_6">Step 3. Register your application with Spotify.</heading>
 
-            <p>The other essential component of the app is the connection to
-            Spotify, so that it can retrieve songs and playlists.</p>
 
-            
-            <!-- SIDEBAR   
-For authors:  You can include sidebars in the body of your article. 
-They default to right alignment, so make sure their placement does 
-not collide with code listings, tables, or other elements. Don't include 
-a heading. Place all sidebar text inside one or multiple paragraphs. -->
-            <sidebar>
-                <p><strong>Twitter’s Stream interface</strong> is perfect for
-                    observing trends in sentiment, since it allows access to all
-                    of the Twitter content on a topic over time.</p>
-                <p>Our app works only with the public Twitter stream, so
-                    Twitter’s Application-only Authentication scheme is
-                    sufficient. This simplified OAuth exchange doesn’t require a
-                    user login or consent prompt. Using this method does require
-                    an app-specific set of OAuth keys, which are encoded in the
-                    app. For more, see <a
-                        href="https://dev.twitter.com/docs/streaming-apis"
-                        >Twitter streaming APIs</a>.</p>
-            </sidebar>
-
-            <ol>
-              <li>Go to <a href="https://developer.spotify.com/my-applications">developer.spotify.com</a> and login using your Spotify (or Facebook account).  </li>
-
-                <li>Obtain a set of keys by registering it under your Twitter
-                    developer account. Go to the Twitter "My Applications" page
-                    to create and manage the app.</li>
-
-                <li>Add a couple of functions to your app to test the connection
-                    to Twitter. First construct a twitter object using ntwitter
-                    and OAuth keys, then make a simple call to verify those
-                    credentials. <br/><br/>
-                    <code-listing>
-                        <heading refname="listing5">Testing your Twitter
-                            connection</heading>
-                        <pre>
-// Sample keys for demo and article - you must get your own keys 
-//   if you clone this application!
-// Create your own app at: https://dev.twitter.com/apps
-var tweeter = new twitter({
-    consumer_key: 'your',
-    consumer_secret: 'keys',
-    access_token_key: ‘go',
-    access_token_secret: 'here'
-});
-
-app.get('/twitterCheck', function (req, res) {
-    tweeter.verifyCredentials(function (error, data) {
-        res.send("Hello, " + data.name + ".  I am in your twitters.");
-    });
-});
-</pre>
-                    </code-listing>
-                </li>
-
-                <li>Restart the app and visit <code>/twitterCheck</code> to see
-                    that the connection and login to Twitter are working: <figure>
-                        <heading refname="fig6">Test the connection to
-                            Twitter</heading>
-                        <img alt="Test the connection to Twitter" height="91"
-                            src="fig0-0.png" width="432"/>
-                    </figure>
-                    <p>Note that it does identify me as the owner of the app
-                        that is connecting.</p></li>
-
-                <li>Now that the connection to Twitter is established, add a
-                    function to monitor Twitter for one or more phrases.
-                    ntwitter provides a very simple method for doing this: <ol
-                        type="a">
-                        <li>Call <code>stream()</code> and pass the phrase to be
-                            monitored.</li>
-
-                        <li>Use a callback function to process tweets as they
-                            arrive. <p>The Twitter Stream API allows the app to
-                                open a Stream and keep pulling data as long as
-                                it is available. This function works perfectly
-                                for the Node.js app, because it can keep a
-                                stream open on the server and update counters
-                                and average sentiment as it processes the
-                                stream.</p></li>
-
-                        <li>Create a simple interface to set the phrase to be
-                            monitored and to display the results as they come
-                            in. A more sophisticated app could store the Tweets
-                            to a database for more complex processing.</li>
-                    </ol></li>
-            </ol>
-
-            <p>Listing 6 shows the essence of the code to open a stream and log
-                a sample of the tweets:</p>
-
-            <code-listing>
-                <heading refname="listing6">Opening a stream and logging
-                    tweets</heading>
-                <pre>
-app.get('/watchTwitter', function (req, res) {
-    var stream;
-    var testTweetCount = 0;
-    var phrase = 'bieber';
-    tweeter.verifyCredentials(function (error, data) {
-        if (error) {
-            res.send("Error connecting to Twitter: " + error);
-        }
-        stream = tweeter.stream('statuses/filter', {
-            'track': phrase
-        }, function (stream) {
-            res.send("Monitoring Twitter for \'" + phrase 
-                + "\'...  Logging Twitter traffic.");
-            stream.on('data', function (data) {
-                testTweetCount++;
-                // Update the console every 50 analyzed tweets
-                if (testTweetCount % 50 === 0) {
-                    console.log("Tweet #" + testTweetCount + ":  " + data.text);
-                }
-            });
-        });
-    });
-});
-</pre>
-            </code-listing>
 
             <heading refname="" type="h2" back-to-top="no"
                 inline-commenting-id="cmt_7">Step 4. Put it all
