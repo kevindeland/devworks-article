@@ -55,7 +55,7 @@ https://w3-connections.ibm.com/wikis/home?lang=en_US#!/wiki/W221102059c29_45c6_8
         <!-- META-LAST-UPDATED - OPTIONAL. Enter the month, day, and year this page was 
 last updated, and your initials. This is optional because it's only an internal dW 
 convenience to help editors know who last edited the file and when. -->
-        <meta-last-updated month="02" day="25" year="2014" initials="gem"/>
+        <meta-last-updated month="12" day="22" year="2015" initials="gem"/>
         <!-- CONTENT-AREA-PRIMARY - REQUIRED
 For authors: Select the main developerWorks content area (product or 
 technology) that your article applies to if, you know it. If you're not sure 
@@ -69,8 +69,7 @@ you're not sure, just select "ibm" and the developerWorks editor will update it.
         <!-- ARTICLE TITLE - REQUIRED
 For authors: Craft a pithy, keyword-rich title with short, active verbs to best 
 appeal to search engine ranking algorithms. No subtitle is needed.-->
-        <title>TEMPLATE: Build a sentiment analysis application with Node.js,
-            Express, sentiment, and ntwitter</title>
+        <title>Making Watson a Rockstar: Integrating IBM Watson on Bluemix with Spotify and Genius.com</title>
         <!-- PDF - OPTIONAL. For developerWorks editor use only. 
 Size, page count, and URL are inserted automatically by CMA.  -->
         <pdf url="template-dw-article-alt1-7.0-pdf.pdf" pages="11" size="535KB"
@@ -94,19 +93,19 @@ further bio is included with this article.  Also, the author image must be 60x60
 The <company-name> element is required but ignored.  And note that the author 
 email is not required or used. -->
         <author
-            jobtitle="IBM Distinguished Engineer, Cloud Architect, Rational Jazz founder"
+            jobtitle="Staff Software Engineer"
             email="https://www.ibm.com/developerworks/community/profiles/html/profileView.do?key=7d2d9d39-9f15-4a90-844d-24ad75e2bca0&amp;lang=en"
             publish-email="yes">
             <bio>
-                <a href="https://twitter.com/ScottRich">@ScottRich</a>
+                <a href="https://twitter.com/DeLandB4Time">@DeLandB4Time</a>
             </bio>
             <img width="64" height="80"
-                src="http://www.ibm.com/developerworks/i/p-srich60.png"
-                alt="Scott Rich"/>
+                src="https://avatars3.githubusercontent.com/u/4561071"
+                alt="Kevin DeLand"/>
             <author-name>
                 <Prefix/>
-                <GivenName>Scott</GivenName>
-                <FamilyName>Rich</FamilyName>
+                <GivenName>Kevin</GivenName>
+                <FamilyName>DeLand</FamilyName>
                 <Suffix/>
             </author-name>
             <company-name>IBM</company-name>
@@ -134,7 +133,7 @@ the date on this element is displayed below the article title and is used as the
 for the DC.Date meta tag that CMA adds to the html header. It is best practice to leave 
 the date on this element as the original publish date and use the <date-updated> element 
 to indicate the date that the most recent changes have been made to the article. -->        
-        <date-published month="01" day="23" year="2014"/>
+        <date-published month="12" day="22" year="2015"/>
         <!-- DATE-UPDATED - OPTIONAL.  Although not strictly REQUIRED, it is very
 important for SEO purposes that you remember to change this element to reflect the 
 month, day, and year of the most recent update made to the article. When present, 
