@@ -152,12 +152,8 @@ DO NOT include HTML tagging in the abstract. Summarize why the reader would
 benefit from your content, or what business problem would be solved.  Be succinct 
 (no more than 5 sentences), and include keywords or key phrases that will help 
 external search engines find your content. -->
-        <abstract>Build a Node.js application to analyze public reaction to any given
-            topic on Twitter. This article includes a demo, sample code, and full
-            instructions for creating a basic PaaS app, then adding sentiment
-            analysis to it and connecting it to Twitter. The app you build will
-            use popular Node.js modules. You can reuse it anytime you need a quick mobile
-            app to analyze and monitor large volumes of data over time.</abstract>
+        <abstract>Build a Node.js application to connect to your Spotify account, fetch song lyrics from Genius.com, and then use Watson APIs to do fun things with those lyrics. This article includes a demo, sample code, and full
+            instructions for authenticating with Spotify, then fetching lyrics,  and connecting to the Watson APIs on Bluemix. This particular app will show you how to build an app which quizzes you on your foreign language skills by presenting the lyrics of your favorite songs in Spanish in a quiz-like format.</abstract>
 
         <!-- INTRODUCTORY VIDEO - OPTIONAL 
  For authors:  Optionally, develop a short video of yourself introducing the app you wrote 
@@ -206,18 +202,14 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
             <!-- PARAGRAPH 
  For authors: Every paragraph needs a beginning and ending element.
  Do not include unordered, ordered, or definition lists within a paragraph. -->
-            <p>As a software app developer, I've been trying to solve the
-                following problem: how to get immediate feedback from users,
-                specifically online users. Getting an instant read on the
-                Twitterverse's reactions to an app, product launch, campaign, or
-                current event, for example, would be enormously helpful. Are the
-                reactions positive, negative, neutral?</p>
+            <p>There is a growing movement (commonly called the STEAM movement) to integrate the Arts into STEM (Science, Technology, Engineering, Math), in orer to pique the interest of those, especially kids, who would not typically be interested in STEM topics.</p>
 
-            <p>As I thought through the requirements for an application to
-                quickly gauge public sentiment on Twitter, I wanted it to be
-                quick to develop, interface with a Twitter web service, have a
-                simple mobile interface, and quickly analyze large volumes of
-                data over time.</p>
+            <p>Waton's powerful language tools have been used to analyze everything from Jeopardy questions to medical documents. Why not expand Watson's expertise into the realm of art and entertainment?</p>
+
+
+            <p>This article will give you a foundation to connect the powerful langauge processing capabilities of Watson to the songs and lyrics you love. We will start by authenticating with a Spotify account to retrieve playlists of popular songs, then fetching those song lyrics from <a href="http://genius.com">genius.com</a>, and finally using the Watson Developer Cloud to do fun and interesting things with the lyrics.</p>
+
+            <p>In this installment of "Making Watson a Rock Star", we will use the Watson Language Translation service to translate the lyrics of popular songs into Spanish, to help English-speaking users improve their Spanish in a way that is fun, engaging, and memorable.</p>
             <!-- PULLQUOTE - OPTIONAL -->
             <!-- You can use a <pullquote> element to highlight important text in a larger,
                 colored font.  Include the quote source only if someone other than
