@@ -289,292 +289,46 @@ the <code> element for monospace font.  Within the <code> element, you can
 have up to 105 consecutive characters without a space. -->
             <ol>
               <li>Run the <code>node</code> and <code>npm</code> commands: 
-                    <figure>
-                        <heading refname="fig1">Confirming that Node.js and NPM
-                            are set up on your system</heading>
-                        <img
-                            alt="Screen shot of running the node and npm commands"
-                            height="79" src="fig1.jpg" width="450"/>
-                    </figure>
-                </li>
+              <figure>
+                <heading refname="fig1">Confirming that Node.js and NPM
+                are set up on your system</heading>
+                <img
+                    alt="Screen shot of running the node and npm commands"
+                    height="79" src="fig1.jpg" width="450"/>
+              </figure>
+              </li>
 
-                <li>Create the simplest Node.js Express app possible: Hello
-                    Node.js (see <xref href="#listing1"/>). <p>In a new
-                        directory, create the app.js file, the main file of the
-                        Node.js app. Tell Node.js that the Express module is
-                        required, and create the Express app. Register a route
-                        so that requests for <code>/hello</code> will be handled
-                        by the anonymous function shown in <xref
-                            href="#listing1"/>. The handler for
-                        <code>/hello</code> uses the Express helpers to send a
-                        simple text response. The send method handles details
-                        such as defaulting the content type and length. When
-                        using Express, we can ignore some of the details of the
-                        underlying HTTP conversation.</p>
-                
-                    <code-listing>
-                        <heading refname="listing1">Hello Node.js</heading>
-                        <pre>
-var port = (process.env.VCAP_APP_PORT || 3000);
-var express = require("express");
+              <li>Create the simplest Node.js Express app possible: Hello
+              Node.js (see <xref href="#listing1"/>). <p>In a new
+              directory, create the app.js file, the main file of the
+              Node.js app. Tell Node.js that the Express module is
+              required, and create the Express app. Register a route
+              so that requests for <code>/hello</code> will be handled
+              by the anonymous function shown in <xref
+              href="#listing1"/>. The handler for
+              <code>/hello</code> uses the Express helpers to send a
+              simple text response. The send method handles details
+              such as defaulting the content type and length. When
+              using Express, we can ignore some of the details of the
+              underlying HTTP conversation.</p>
+              
+              
+              
+              </li>
 
-var app = express();
-
-app.get('/hello', function(req, res) {
-    res.send("Hello world.");
-});
-
-app.listen(port);
-console.log("Server listening on port " + port);
-</pre>
-                    </code-listing>
-                    <p><strong>Note:</strong> The program could be even simpler,
-                        but a few additional lines of code enable it to run in
-                        the CloudFoundry runtime. In CloudFoundry, the app will
-                        be relocated to a different port (the port can be
-                        discovered from the environment).</p>
-                </li>
-
-                <li>Give Node.js some additional information about the app, as
-                    shown in <xref href="#listing2"/>. <p> Create a
-                        <code>package.json</code> file to tell the app that the
-                        Express module will be used, and name the app "Simple
-                        Sentiment Analysis App." Since this app is not intended
-                        to be published to the NPM registry, you can mark it as
-                        private. Finally, declare that the app depends on a 3.x
-                        version of the Express module.</p>
-                    <code-listing>
-                        <heading refname="listing2">package.json</heading>
-                        <pre>
-package.json for Hello Node
-{
-  "name": "SimpleSentimentAnalysisApp",
-  "description": "Simple Sentiment Analysis App",
-  "version": "0.9.0",
-  "private": true,
-  "dependencies": {
-    "express": "3.x"
-  }
-}
-</pre>
-                    </code-listing>
-                </li>
             </ol>
-            <!-- H3, H4, H5 HEADINGs. 
-For authors: These headings organize major sections into smaller units. 
-If you need to refer to this heading, fill in a unique refname; otherwise, 
-leave the refname attribute blank. You don't need to add the values for 
-the inline-commenting-id attributes. The developerWorks editor will add those. -->
-            <heading refname="" type="h3" inline-commenting-id="cmt_3">Run and
-                test your Hello Node.js app</heading>
-
-            <p>Next, run and test the Hello Node.js app using these steps:</p>
-            <ol>
-                <li>Before running your app, prepare the node environment using
-                    NPM to fetch the dependencies declared for the app (and
-                    their dependencies and so on). <figure>
-                        <heading refname="fig2">Prepare the node
-                            environment</heading>
-                        <img
-                            alt="Screen shot of running the npm install command"
-                            height="169" src="fig2.jpg" width="610"/>
-                    </figure>
-                    <p>The result of a successful NPM install is the creation of
-                        the <code>node_modules</code> directory, populated with
-                        the required modules.</p></li>
-                <li>Type <code>node app.js</code> at the command line. <figure>
-                        <heading refname="fig3">Run the node app.js
-                            command</heading>
-                        <img width="322" height="29" src="fig3.jpg"
-                            alt="Screen shot of running the node app.js command"
-                        />
-                    </figure>
-                    <p>The message "Server listening on port 3000" confirms that
-                        the app has started and is listening for
-                    requests.</p></li>
-
-                <li>Test the behavior of the app by pointing a browser to <a
-                        href="http://localhost:3000/hello"
-                        >http://localhost:3000/hello</a>. <figure>
-                        <heading refname="fig4">Test the behavior of the
-                            app</heading>
-                        <img
-                            alt="Screen shot of pointing a browser to //localhost:3000/hello"
-                            height="116" src="fig4.jpg" width="292"/>
-                    </figure>
-                </li>
-            </ol>
-
+                 
+            
+            
             <heading refname="" type="h2" back-to-top="no"
                 inline-commenting-id="cmt_4">Step 2. Create an app in Bluemix and bind it to a Watson Language Translation service</heading>
 
-            <p>Now that your basic app is running and the environment is set up,
-                it's time to add some real function using the very cool
-                    <strong>sentiment</strong> module by Andrew Sliwinsky. He
-                describes it as "a Node.js module that uses the AFINN-111
-                wordlist to perform sentiment analysis on arbitrary blocks of
-                input text." This is a relatively simple implementation of
-                sentiment analysis, as you'll see. It simply scores the words in
-                your text using a dictionary of English words that have been
-                rated for positive or negative sentiment.</p>
-
-            <ol>
-                <li>To begin using the sentiment module, update the
-                    <code>package.json</code> to include it as a dependency: <code-listing>
-                        <heading refname="listing3">Update
-                            package.json</heading>
-                        <pre>
-{
-  "name": "SimpleSentimentAnalysisApp",
-  "description": "Simple Sentiment Analysis App",
-  "version": "0.9.0",
-  "private": true,
-  "dependencies": {
-    "express": "3.x",
-    <strong>"sentiment": "0.2.1"</strong>
-  }
-}
-</pre>
-                    </code-listing>
-                </li>
-
-                <li>Tell Node.js to get this new module with the command
-                    <code>npm
-                        update</code>. (Note: The
-                    docs suggest that <code>npm install</code> should also have
-                    picked up the new dependency, but that was not the behavior
-                    I saw.) </li>
-
-                <li>Require the new sentiment module: <code-listing>
-                        <pre>
-var express = require("express");
-</pre>
-                    </code-listing>
-                </li>
-
-                <li>Create another route to experiment with the sentiment
-                    module: <code-listing>
-                        <heading refname="listing4">The sentiment analysis app
-                            interface code</heading>
-                        <pre>
-app.get('/testSentiment',
-    function (req, res) {
-        var response = "&lt;HEAD&gt;" +
-          "&lt;title&gt;Twitter Sentiment Analysis&lt;/title&gt;\n" +
-          "&lt;/HEAD&gt;\n" +
-          "&lt;BODY&gt;\n" +
-          "&lt;P&gt;\n" +
-          "Welcome to the Twitter Sentiment Analysis app.  " +   
-          "What phrase would you like to analzye?\n" +                
-          "&lt;/P&gt;\n" +
-          "&lt;FORM action=\"/testSentiment\" method=\"get\"&gt;\n" +
-          "&lt;P&gt;\n" +
-          "Enter a phrase to evaluate: &lt;INPUT type=\"text\" name=\"phrase\"&gt;&lt;BR&gt;\n" +
-          "&lt;INPUT type=\"submit\" value=\"Send\"&gt;\n" +
-          "&lt;/P&gt;\n" +
-          "&lt;/FORM&gt;\n" +
-          "&lt;/BODY&gt;";
-        var phrase = req.query.phrase;
-        if (!phrase) {
-            res.send(response);
-        } else {
-            sentiment(phrase, function (err, result) {
-                response = 'sentiment(' + phrase + ') === ' + result.score;
-                res.send(response);
-            });
-        }
-    });
-</pre>
-                    </code-listing>
-                    <p>Apologies to web architects and designers everywhere for
-                        the brute force simplicity of this new function. I
-                        promise we’ll do something more intelligent later. For
-                        now, we’re going to put up a form that lets us enter a
-                        phrase and then respond with the rating provided by
-                        sentiment. The key function call is
-                            <strong><code>sentiment(phrase, function)</code></strong>.
-                        In the spirit of Node.js, the sentiment library is
-                        asynchronous, so the result of the analysis is processed
-                        by a callback function.</p></li>
-
-                <li>Restart the app and point a browser to <a
-                        href="http://localhost:3000/testSentiment"
-                        >http://localhost:3000/testSentiment</a>. <figure>
-                        <heading refname="fig5">The sentiment analysis app user
-                            interface</heading>
-                        <img
-                            alt="Screen capture showing a browser pointing to localhost:3000/testSentiment"
-                            height="139" src="fig5.jpg" width="432"/>
-                    </figure>
-                </li>
-            </ol>
-
-            <pullquote>
-                <pullquote-text>Et voil<agrave/>, a fabulous user interface for
-                    sentiment analysis!</pullquote-text>
-                <pullquote-source/>
-            </pullquote>
-
+            
+            
             <heading refname="" type="h3" inline-commenting-id="cmt_5">Scoring
                 sample sentiments</heading>
 
-            <p>Here are some hypothetical results from our sentiment analysis
-                app:</p>
-            <!-- TABLE   
-For authors: You can include tables in your article.  Pick the table format
-that best fits your needs and use the coding shown, including attributes
-such as scope and class.
-Each table needs a caption; use either the <heading> element (preferred) or 
-the <caption> element for the caption. If auto-number="yes" is specified 
-on the <dw-article> element, your heading text will be prefixed with the word 
-"Table" and the table number, such as "Table 1. " or "Table 2. ".
-            -->
-            <table border="0" cellpadding="0" cellspacing="0"
-                class="ibm-data-table">
-                <heading refname="table1">Hypothetical results of analyzing
-                    "Node.js"</heading>
-                <thead>
-                    <tr>
-                        <th scope="col">Sentiment</th>
-                        <th class="ibm-numeric" scope="col">Score</th>
-                        <th scope="col">Interpretation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th class="ibm-table-row" scope="row">Node.js is cool, I
-                            love it</th>
-                        <td class="ibm-numeric">4</td>
-                        <td>Very positive sentiment</td>
-                    </tr>
-                    <tr>
-                        <th class="ibm-table-row" scope="row">Node.js is uncool,
-                            I hate it</th>
-                        <td class="ibm-numeric">-3</td>
-                        <td>Very negative sentiment</td>
-                    </tr>
-                    <tr>
-                        <th class="ibm-table-row" scope="row">Mi piace Node.js.
-                            Node.js <eacute/> bellissima</th>
-                        <td class="ibm-numeric">0</td>
-                        <td>No sentiment detected. Sentiment has only an English
-                            dictionary.</td>
-                    </tr>
-                    <tr>
-                        <th class="ibm-table-row" scope="row">Node.js is not
-                            cool, I do not love it</th>
-                        <td class="ibm-numeric">4</td>
-                        <td>Oops! Very positive, same score as the first
-                            example. Sentiment is not aware of grammar or
-                            negation.</td>
-                    </tr>
-                </tbody>
-            </table>
 
-            <p>You can see the limitations of this approach, namely that the
-                sentiment module only has an English dictionary and is not aware
-                of grammar or negation. Still, it’s probably good enough to get
-                the gist of most tweets.</p>
 
             <heading refname="" type="h2" back-to-top="no"
                 inline-commenting-id="cmt_6">Step 3. Register your application with Spotify.</heading>
