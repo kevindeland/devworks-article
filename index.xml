@@ -204,28 +204,27 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
  Do not include unordered, ordered, or definition lists within a paragraph. -->
             <p>There is a growing movement (commonly called the STEAM movement) to integrate the Arts into STEM (Science, Technology, Engineering, Math), in orer to pique the interest of those, especially kids, who would not typically be interested in STEM topics.</p>
 
-            <p>Waton's powerful language tools have been used to analyze everything from Jeopardy questions to medical documents. Why not expand Watson's expertise into the realm of art and entertainment?</p>
+
+            <!-- PULLQUOTE - OPTIONAL -->
+            <!-- You can use a <pullquote> element to highlight important text in a larger,
+                 colored font.  Include the quote source only if someone other than
+                 the author is being quoted. -->
+
+            <pullquote>
+                <pullquote-text>Waton's powerful language tools have been used to analyze everything from Jeopardy questions to medical documents. Why not expand Watson's expertise into the realm of art and entertainment?</pullquote-text>
+                <pullquote-source/>
+            </pullquote>
 
 
             <p>This article will give you a foundation to connect the powerful langauge processing capabilities of Watson to the songs and lyrics you love. We will start by authenticating with a Spotify account to retrieve playlists of popular songs, then fetching those song lyrics from <a href="http://genius.com">genius.com</a>, and finally using the Watson Developer Cloud to do fun and interesting things with the lyrics.</p>
 
             <p>In this installment of "Making Watson a Rock Star", we will use the Watson Language Translation service to translate the lyrics of popular songs into Spanish, to help English-speaking users improve their Spanish in a way that is fun, engaging, and memorable.</p>
-            <!-- PULLQUOTE - OPTIONAL -->
-            <!-- You can use a <pullquote> element to highlight important text in a larger,
-                colored font.  Include the quote source only if someone other than
-                the author is being quoted. -->
-            <pullquote>
-                <pullquote-text>With existing building blocks, you can put
-                    together, very quickly, a fun little sentiment analysis
-                    application.</pullquote-text>
-                <pullquote-source/>
-            </pullquote>
 
             <!-- IBM-TOOLTIP - OPTIONAL -->
             <!-- You can use the ibm-tooltip class to define a term in context.  Put the
                 definition in the title attribute.  The defined term will then appear with
                 a dotted underscore, and on hover, the definition will pop up. -->
-            <p>I chose to build it as a <a class="ibm-tooltip"
+<!--            <p>I chose to build it as a <a class="ibm-tooltip"
                     title="Platform as a Service: Runtime environment that helps developers build and deploy web applications on a hosted infrastructure"
                     >PaaS</a> app, using JavaScript and the popular Node.js
                 runtime for PaaS apps. The app uses the service-composition
@@ -237,7 +236,7 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
                     >Heroku</a>. I settled on developing this app at JazzHub.
                 This provides me with a place to publish the application, as
                 well as a nice browser-based IDE to develop the code.</p>
-
+-->
             <!-- CALLS TO ACTION - OPTIONAL, BUT STRONGLY RECOMMENDED -->
             <!-- Your article should have at least one call to action. If you have a two calls to action, use the
                 <button-block-two-column> element, shown below.  If you have a single call to action, use the 
@@ -253,13 +252,13 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
                 <first-column>
                     <button-link button-style="blue">
                         <text>Run the app</text>
-                        <url>http://simplesentimentanalysis.bluemix.net/</url>
+                        <url>http://cuantos-caminos.mybluemix.net/</url>
                     </button-link>
                 </first-column>
                 <second-column>
                     <button-link button-style="blue">
-                        <text>Get the code at JazzHub</text>
-                        <url>https://hub.jazz.net/project/srich/Sentiment%20Analysis%20App</url>
+                        <text>Get the code at GitHub</text>
+                        <url>https://hub.jazz.net/project/srich/Sentiment%20Analysis%20App</url><!-- TODO -->
                     </button-link>
                 </second-column>
             </button-block-two-column>
@@ -298,22 +297,21 @@ in the sentence (do not create or refer to a separate "Resources" section at the
 the article). -->
 
             <ol>
-                <li>A basic familiarity with <a
-                        href="http://www.ibm.com/developerworks/library/j-nodejs/index.html"
-                        >Node.js</a> and a Node.js development environment.</li>
-                <li>These Node.js modules: <ul>
-                        <li><a href="https://github.com/visionmedia/express"
-                                >Express framework</a>: Makes it easy to build
-                            Node.js web apps.</li>
-                        <li><a href="https://github.com/thisandagain/sentiment"
-                                >sentiment module</a>: Does simple sentiment
-                            analysis on a string.</li>
-                        <li><a href="https://github.com/AvianFlu/ntwitter"
-                                >ntwitter module</a>: Provides a simple
-                            interface to Twitter, including support for
-                            Twitter’s Stream API.</li>
-                    </ul>
-                </li>
+              <li>A Bluemix account</li>
+              <li>A basic familiarity with <a
+              href="http://www.ibm.com/developerworks/library/j-nodejs/index.html"
+              >Node.js</a> and a Node.js development environment.</li>
+              <li>These Node.js modules:
+              <ul>
+                <li><a href="https://github.com/visionmedia/express"
+                       >Express framework</a>: Makes it easy to build
+                Node.js web apps.</li>
+                <li><a href="http://simplesentimentanalysis.bluemix.net/"
+                       >Watson Developer Cloud</a>: Provides many SDKs that use cognitive computing to solve complex problems.</li>
+                <li><a href="https://github.com/kenshiro-o/RapGenius-JS"
+                       >RapGenius-JS module</a>: Provides a client that enables you to query genius.com (formerly rapgenius.com) and retrieve information about rap and rock artists and songs.</li>
+              </ul>
+              </li>
             </ol>
 
             <!-- CALL-TO-ACTION-BLOCK - OPTIONAL  
