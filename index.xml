@@ -719,12 +719,7 @@ a heading. Place all sidebar text inside one or multiple paragraphs. -->
             </sidebar>
 
             <ol>
-              <li>Go to <a href="https://developer.spotify.com/my-applications">developer.spotify.com</a> and login using your Spotify (or Facebook account).  <!-- <figure>
-             <heading refname="fig6">Create an App 
-              </heading>
-              <img alt="Create a new Spotify App" height="91"
-                   src="fig0-0.png" width="432"/>
-              </figure> --></li>
+              <li>Go to <a href="https://developer.spotify.com/my-applications">developer.spotify.com</a> and login using your Spotify (or Facebook account).  </li>
 
                 <li>Obtain a set of keys by registering it under your Twitter
                     developer account. Go to the Twitter "My Applications" page
@@ -762,7 +757,7 @@ app.get('/twitterCheck', function (req, res) {
                         <heading refname="fig6">Test the connection to
                             Twitter</heading>
                         <img alt="Test the connection to Twitter" height="91"
-                            src="fig6.jpg" width="432"/>
+                            src="fig0-0.png" width="432"/>
                     </figure>
                     <p>Note that it does identify me as the owner of the app
                         that is connecting.</p></li>
