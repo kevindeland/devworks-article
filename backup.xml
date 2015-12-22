@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  developerWorks ARTICLE TEMPLATE for AUTHORS:  V7.0 (ALT1 LAYOUT) -->
+<!-- Welcome, authors!  To make this template easy to use, we've indicated the items 
+you need to fill in, and the items you can ignore (for developerWorks editor use).
+
+Here are the minimum items you need to fill in for your article:
+  GEOGRAPHY (worldwide, for English, or a local site)
+  KEYWORDS
+  CONTENT-AREA-PRIMARY
+  ARTICLE TITLE
+  ARTICLE SUBTITLE
+  ABSTRACT
+  ARTICLE BODY (includes headings, paragraphs, lists, code listings, sidebars, 
+  figures, and tables as needed)
+  
+As you fill in the items, please remember:
+   - DO USE lowercase for all element names (the XML coding between angle brackets). 
+   - DON'T USE span elements, code font elements, CDATA elements, or font classes.
+  
+Questions? Please consult: 
+   - The many comment lines we've included in this file
+   - The in-depth article: "Authoring with the developerWorks XML templates"
+      http://www.ibm.com/developerworks/library/i-dwauthors/
+     (This article includes this template and the complete author file package)
+   - Your developerWorks editor
+    
+We welcome your feedback and look forward to publishing your content. -->
+    <!-- DW DOCUMENT - REQUIRED   
+For authors:  For local-site, choose one of the following: brazil, china, japan, 
+russia, ssa (for Spanish South America), vietnam, or worldwide (for English).  
+The remaining attributes are for developerWorks editor use only; do not edit. -->
+<dw-document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dw="http://www.ibm.com/developerWorks/"
+    xsi:noNamespaceSchemaLocation="../../schema/dw-document-7.0.xsd"
+    local-site="worldwide">
+
+    <!-- DW-ARTICLE - REQUIRED
+The layout attribute is for developerWorks editor use only; do not edit.
+For authors:  Use auto-number="yes" (recommended) to enable automatic 
+numbering of headings for code listings, figures, and tables. This setting also 
+is required to enable the use of the <xref> element.  -->
+
+    <dw-article layout="ArticleStandardAlt1" auto-number="yes" skill-level="2"
+        page-end-btt-link="yes">
+        <!-- ID - REQUIRED
+For developerWorks editor use only.  -->
+        <id cma-id="" original="yes"/>
+        <!-- KEYWORDS REQUIRED
+For authors: Add unique keywords or key phrases that will help external 
+search engines find your content.  Use commas to separate keywords 
+and phrases.
+For editors: For advice on effective keywords, see 
+https://w3-connections.ibm.com/wikis/home?lang=en_US#!/wiki/W221102059c29_45c6_8a38_b438b0b24d5f/page/developerWorks%20title,%20meta%20tag,%20and%20SEO%20guidelines -->
+        <keywords content=""/>
+        <!-- META-LAST-UPDATED - OPTIONAL. Enter the month, day, and year this page was 
+last updated, and your initials. This is optional because it's only an internal dW 
+convenience to help editors know who last edited the file and when. -->
+        <meta-last-updated month="12" day="22" year="2015" initials="gem"/>
+        <!-- CONTENT-AREA-PRIMARY - REQUIRED
+For authors: Select the main developerWorks content area (product or 
+technology) that your article applies to if, you know it. If you're not sure 
+of the correct value, just select "ibm" and the developerWorks editor will update it. -->
+        <content-area-primary name="analytics"/>
+        <!-- CONTENT-AREA-SECONDARY - OPTIONAL
+For authors (optional): Select any related developerWorks content areas 
+(product or technology) that your article applies to, if you know them. If 
+you're not sure, just select "ibm" and the developerWorks editor will update it. -->
+        <content-area-secondary name="rational"/>
+        <!-- ARTICLE TITLE - REQUIRED
+For authors: Craft a pithy, keyword-rich title with short, active verbs to best 
+appeal to search engine ranking algorithms. No subtitle is needed.-->
+        <title>Making Watson a Rockstar: Integrating IBM Watson on Bluemix with Spotify and Genius.com</title>
+        <!-- PDF - OPTIONAL. For developerWorks editor use only. 
+Size, page count, and URL are inserted automatically by CMA.  -->
+        <pdf url="template-dw-article-alt1-7.0-pdf.pdf" pages="11" size="535KB"
+            paperSize="common"/>
+        <!-- AUTHOR - REQUIRED
+For authors: In jobtitle, list your current title and, optionally, relevant positions, 
+up to 8 words total.  Incorporate your company name.  
+Examples: 
+   "Founder and CEO of Melonfile" 
+   "Head of Technology at Core International" 
+   "IBM Distinguished Engineer, Cloud Architect, Rational Jazz founder" 
+In your email, specify your developerWorks profile URL (your email address is not 
+required, and it doesn't appear in the article).  If you don't have a developerWorks 
+profile, consider creating one.  (A LinkedIn profile, or your own CV webpage, 
+will suffice.)  In your bio, specify simply your Twitter profile as shown, nothing more.
+If there are multiple authors, add more <author> elements.
+
+For editors: In the CMA author bio associated with this article, edit the bio to 
+include simply the author's linked Twitter profile as shown, nothing more. No 
+further bio is included with this article.  Also, the author image must be 60x60.  
+The <company-name> element is required but ignored.  And note that the author 
+email is not required or used. -->
+        <author
+            jobtitle="Staff Software Engineer"
+            email="https://www.ibm.com/developerworks/community/profiles/html/profileView.do?key=7d2d9d39-9f15-4a90-844d-24ad75e2bca0&amp;lang=en"
+            publish-email="yes">
+            <bio>
+                <a href="https://twitter.com/DeLandB4Time">@DeLandB4Time</a>
+            </bio>
+            <img width="64" height="80"
+                src="https://avatars3.githubusercontent.com/u/4561071"
+                alt="Kevin DeLand"/>
+            <author-name>
+                <Prefix/>
+                <GivenName>Kevin</GivenName>
+                <FamilyName>DeLand</FamilyName>
+                <Suffix/>
+            </author-name>
+            <company-name>IBM</company-name>
+        </author>
+
+        <!-- AUTHOR-LINK - OPTIONAL
+For authors:  If you have a Google+ profile, enter it here, and update the
+Links section of your profile page to include "IBM developerWorks" 
+(www.ibm.com/developerworks/) as a site you contribute to.  This will cover the 
+ownership claim on any future articles you write for developerWorks.  Only 
+one profile URL is allowed per article. If this article has multiple authors, 
+use the primary author's. -->
+        <!-- <author-link type="google+">
+            <url>https://plus.google.com/123456789012345678901</url>
+        </author-link> -->
+
+        <!-- TRANSLATOR OPTIONAL 
+For editors:  Specify the name of the company or person that translated this content.  
+If a company, enter the website URL; if a person, enter the person's email address. -->
+        <!-- <translator company-website="" email=""></translator> -->
+
+        <!-- DATE-PUBLISHED - REQUIRED. Enter the month, day, and year the article was 
+first published. If you do not include an optional <date-updated> element (see below), 
+the date on this element is displayed below the article title and is used as the value 
+for the DC.Date meta tag that CMA adds to the html header. It is best practice to leave 
+the date on this element as the original publish date and use the <date-updated> element 
+to indicate the date that the most recent changes have been made to the article. -->        
+        <date-published month="12" day="22" year="2015"/>
+        <!-- DATE-UPDATED - OPTIONAL.  Although not strictly REQUIRED, it is very
+important for SEO purposes that you remember to change this element to reflect the 
+month, day, and year of the most recent update made to the article. When present, 
+the date on this element is displayed below the article title and is used as the 
+value for the DC.Date meta tag that CMA adds to the html header. -->
+        <date-updated month="02" day="25" year="2014"/>
+        <!-- DATE-TRANSLATED - OPTIONAL 
+For developerWorks editor use only.  For local sites; use the date that this content 
+was translated.
+        <date-translated month="" year=""/> -->
+
+        <!-- ABSTRACT - REQUIRED
+For authors: The abstract does NOT appear in the article, but it does appear 
+in the developerWorks technical library view and in search engine results. 
+DO NOT include HTML tagging in the abstract. Summarize why the reader would 
+benefit from your content, or what business problem would be solved.  Be succinct 
+(no more than 5 sentences), and include keywords or key phrases that will help 
+external search engines find your content. -->
+        <abstract>Build a Node.js application to connect to your Spotify account, fetch song lyrics from Genius.com, and then use Watson APIs to do fun things with those lyrics. This article includes a demo, sample code, and full
+            instructions for authenticating with Spotify, then fetching lyrics,  and connecting to the Watson APIs on Bluemix. This particular app will show you how to build an app which quizzes you on your foreign language skills by presenting the lyrics of your favorite songs in Spanish in a quiz-like format.</abstract>
+
+        <!-- INTRODUCTORY VIDEO - OPTIONAL 
+ For authors:  Optionally, develop a short video of yourself introducing the app you wrote 
+ and perhaps demonstrating it on your computer or mobile device.  Send the video source 
+ to your developerWorks editor.
+ For editors:  If the author submits a video, follow the separate instructions on adding a
+ thumbnail image, transcript, and closed-captions for the video on the developerWorks 
+ YouTube channel. -->
+        <!-- <introductory-video>
+            <video-container>
+                <video-url>//www.youtube.com/watch?v=THN_nq7W6PE</video-url>
+                <thumbnail-image-url>//www.ibm.com/developerworks/library/wa-nodejs-app/sentiment-analysis-thumb-940x330.jpg</thumbnail-image-url>
+                <video-title display="no">Build a Twitter sentiment analysis application using Node.js modules</video-title>
+                <video-transcript-url>//www.ibm.com/developerworks/library/wa-nodejs-app/wa-nodejs-app-transcript-pdf.pdf</video-transcript-url>
+                <video-length>
+                    <minutes>3</minutes>
+                    <seconds>54</seconds>
+                </video-length>
+            </video-container>
+        </introductory-video> -->
+
+        <!-- START OF ARTICLE BODY   
+For authors: Your article can contain paragraphs, major headings, minor
+headings, code listings, images, tables, sidebars, lists, highlighting, and 
+"quoted" content in a larger font ("pull quotes"). 
+
+DO NOT copy or cut and paste text from word processors such as 
+Microsoft Word. The encoding method they use (even if UTF-8) creates 
+invalid characters in the XML. Instead, save the Word document 
+as a text file and then copy the text.  -->
+
+        <docbody>
+
+            <!--For authors: On writing style. As you compose your article, aim for a
+conversational style, including the purpose of the app, why you chose the tools, 
+frameworks, languages, etc. you did, and how you developed the app, including 
+relevant instructional information about the tools, frameworks, languages, etc. 
+you used.  Don't overdo it.  You can make assumptions that the reader has some 
+level of these skills, and should state those assumptions in the article.  Your purpose 
+should be to teach a fellow developer how to develop a similar app using services 
+in BlueMix and how to contribute to further development of your app on JazzHub.  
+You should present your material in easy-to-follow steps and include relevant 
+screen captures and code snippets.  Short, to-the-point articles are best.  We can 
+string multiple articles together in an easy-to-consume set, if necessary.-->
+
+            <!-- PARAGRAPH 
+ For authors: Every paragraph needs a beginning and ending element.
+ Do not include unordered, ordered, or definition lists within a paragraph. -->
+            <p>There is a growing movement (commonly called the STEAM movement) to integrate the Arts into STEM (Science, Technology, Engineering, Math), in orer to pique the interest of those, especially kids, who would not typically be interested in STEM topics.</p>
+
+
+            <!-- PULLQUOTE - OPTIONAL -->
+            <!-- You can use a <pullquote> element to highlight important text in a larger,
+                 colored font.  Include the quote source only if someone other than
+                 the author is being quoted. -->
+
+            <pullquote>
+                <pullquote-text>Waton's powerful language tools have been used to analyze everything from Jeopardy questions to medical documents. Why not expand Watson's expertise into the realm of art and entertainment?</pullquote-text>
+                <pullquote-source/>
+            </pullquote>
+
+
+            <p>This article will give you a foundation to connect the powerful langauge processing capabilities of Watson to the songs and lyrics you love. We will start by authenticating with a Spotify account to retrieve playlists of popular songs, then fetching those song lyrics from <a href="http://genius.com">genius.com</a>, and finally using the Watson Developer Cloud to do fun and interesting things with the lyrics.</p>
+
+            <p>In this installment of "Making Watson a Rock Star", we will use the Watson Language Translation service to translate the lyrics of popular songs into Spanish, to help English-speaking users improve their Spanish in a way that is fun, engaging, and memorable.</p>
+
+            <!-- IBM-TOOLTIP - OPTIONAL -->
+            <!-- You can use the ibm-tooltip class to define a term in context.  Put the
+                definition in the title attribute.  The defined term will then appear with
+                a dotted underscore, and on hover, the definition will pop up. -->
+<!--            <p>I chose to build it as a <a class="ibm-tooltip"
+                    title="Platform as a Service: Runtime environment that helps developers build and deploy web applications on a hosted infrastructure"
+                    >PaaS</a> app, using JavaScript and the popular Node.js
+                runtime for PaaS apps. The app uses the service-composition
+                programming model supported by PaaS environments like <a
+                    class="ibm-tooltip"
+                    title="An interoperable Platform as a Service framework that gives users freedom of choice across cloud infrastructure and application programming models"
+                    >Cloud Foundry</a> and <a class="ibm-tooltip"
+                    title="A cloud Platform as a Service that supports Node.js among other programming languages"
+                    >Heroku</a>. I settled on developing this app at JazzHub.
+                This provides me with a place to publish the application, as
+                well as a nice browser-based IDE to develop the code.</p>
+-->
+            <!-- CALLS TO ACTION - OPTIONAL, BUT STRONGLY RECOMMENDED -->
+            <!-- Your article should have at least one call to action. If you have a two calls to action, use the
+                <button-block-two-column> element, shown below.  If you have a single call to action, use the 
+                <button-link> element with a blue button-style.
+                Examples:
+                "Run the app"
+                "Get the code at JazzHub"
+                "Evaluate <IBM product>"
+                "Download <IBM product>"
+                "Develop in the cloud at JazzHub"
+               -->
+            <button-block-two-column>
+                <first-column>
+                    <button-link button-style="blue">
+                        <text>Run the app</text>
+                        <url>http://cuantos-caminos.mybluemix.net/</url>
+                    </button-link>
+                </first-column>
+                <second-column>
+                    <button-link button-style="blue">
+                        <text>Get the code at GitHub</text>
+                        <url>https://hub.jazz.net/project/srich/Sentiment%20Analysis%20App</url><!-- TODO -->
+                    </button-link>
+                </second-column>
+            </button-block-two-column>
+
+            <!--  HEADINGS  
+For authors:  You can use four levels of headings: h2 down to h5.  Try to make your first 
+heading "What you'll need..." and summarize the prerequisite software, knowledge, skills, 
+or experience the reader will need to get the most benefit from your article. 
+
+If you need to refer to a heading, fill in the refname attribute (and make sure 
+all refnames in this article are unique).  Otherwise, leave refname blank. 
+Leave the back-to-top value set to "no" for each heading. 
+            
+For editors:  When you edit the author's final submission, manually add and 
+increment the inline-commenting-id values on all type-h2 and type-h3 headings.
+IMPORTANT:  
+1) The id MUST begin with characters: cmt_ 
+We recommend you follow those characters with a number, as shown below.  
+Note that id values must be unique.  Numbers do not need to be sequential.
+2) If you update and republish the article, DO NOT CHANGE any 
+of the inline-commenting-id values; doing so will disrupt any comments that have 
+already been submitted. -->
+
+            <heading refname="" type="h2" back-to-top="no"
+                inline-commenting-id="cmt_1">What you'll need to build a similar
+                app</heading>
+            <!-- LIST  
+For authors: You can include ordered (ol) and unordered (ul) lists in your article.  
+If you have an ordered list interrupted by a heading and want the numbering to 
+continue, use the start attribute. For example, to resume the list at number 6, 
+use <ol start="6">.  Do not include lists inside paragraph elements; rather, end the 
+paragraph before you start a list. -->
+
+            <!--For authors: When linking to other content, link to immediately relevant content 
+in the sentence (do not create or refer to a separate "Resources" section at the end of 
+the article). -->
+
+            <ol>
+              <li>A Bluemix account</li>
+              <li>A basic familiarity with <a
+              href="http://www.ibm.com/developerworks/library/j-nodejs/index.html"
+              >Node.js</a> and a Node.js development environment.</li>
+              <li>These Node.js modules:
+              <ul>
+                <li><a href="https://github.com/visionmedia/express"
+                       >Express framework</a>: Makes it easy to build
+                Node.js web apps.</li>
+                <li><a href="http://simplesentimentanalysis.bluemix.net/"
+                       >Watson Developer Cloud</a>: Provides many SDKs that use cognitive computing to solve complex problems.</li>
+                <li><a href="https://github.com/kenshiro-o/RapGenius-JS"
+                       >RapGenius-JS module</a>: Provides a client that enables you to query genius.com (formerly rapgenius.com) and retrieve information about rap and rock artists and songs.</li>
+              </ul>
+              </li>
+            </ol>
+
+            <!-- CALL-TO-ACTION-BLOCK - OPTIONAL  
+For authors: Linking directly to immediately relevant resources in the sentence 
+is preferred. But you also include supporting, tangential material at or near the 
+end of a section for the reader to watch or read if desired.  For this supporting 
+material, you can use "watch" or "read" elements. -->
+
+            <call-to-action-block type="watch">
+                <text>Getting started with Node.js (video demo)</text>
+                <url>http://www.ibm.com/developerworks/offers/lp/demos/summary/j-jnodejs.html</url>
+            </call-to-action-block>
+
+            <call-to-action-block type="read">
+                <text>OAuth 2.0 authentication</text>
+                <url>https://developers.google.com/accounts/docs/OAuth2</url>
+            </call-to-action-block>
+
+            <p>The steps below describe the most basic approach. For more
+                advanced tooling to speed your development, see <a href="#tools"
+                    >Additional tooling considerations</a>.</p>
+
+            <heading refname="" type="h2" back-to-top="no"
+                inline-commenting-id="cmt_2">Step 1. Fork the application code from github</heading>
+
+            <!-- MONOSPACE FONT 
+For authors:  Highlight code elements (the name of a command, class, 
+object, method, code snippet, or anything the user types in) in a sentence using 
+the <code> element for monospace font.  Within the <code> element, you can 
+have up to 105 consecutive characters without a space. -->
+            <ol>
+              <li>Run the <code>node</code> and <code>npm</code> commands: <!-- FIGURE 
+For authors:  You can include graphics in the sections of an article.
+
+Include a <heading> element to provide a caption for each figure.  If
+auto-number="yes" is specified on the <dw-article> element, your 
+heading text will be prefixed with the word "Figure" and the figure 
+number, such as "Figure 1. " or "Figure 2. ".
+
+The alt attribute on the img tag is required and should contain a brief, 
+meaningful description of the image for a visually impaired user (limit is 130 
+characters). Avoid embedding text inside images, as it cannot be read by 
+screen readers. If you cannot avoid including text in an image, include the 
+same text as part of the alt text, or in the text surrounding the image. Also, 
+pay attention to the use of color in images. To ensure your graphic meets 
+accessibility requirements, do not use color as the only method of conveying 
+meaning. Color can emphasize a point for a sighted user, but should not be 
+the only means of conveying a message.
+
+Images should be in gif, jpg, or png format, and no wider than is needed to convey 
+a concept, up to a maximum of 850 pixels, as shown in Figure 1. If the width 
+attribute of your image is greater than 850, the stylesheet will display an error 
+message in the HTML output instead of your image. If you include the figure 
+in a list, such as a screenshot in a numbered procedure, the maximum width 
+is determined by the level of nesting. Code the figure inside 
+the list item, like this: 
+<ol>
+        <li>Select the Java Beans view, as shown in the following figure: 
+            <figure>
+                        <heading refname="fig1">Confirming that Node.js and NPM are set up
+                            on your system</heading>
+                        <img alt="Screen shot of running the node and npm commands" height="79" src="fig1.jpg" width="450"/>
+                    </figure>
+        </li>
+</ol>   
+For additional advice, see "Illustrating your article or tutorial for developerWorks" 
+at: http://www.ibm.com/developerworks/library/i-dwgraphics/ -->
+                    <figure>
+                        <heading refname="fig1">Confirming that Node.js and NPM
+                            are set up on your system</heading>
+                        <img
+                            alt="Screen shot of running the node and npm commands"
+                            height="79" src="fig1.jpg" width="450"/>
+                    </figure>
+                </li>
+
+                <li>Create the simplest Node.js Express app possible: Hello
+                    Node.js (see <xref href="#listing1"/>). <p>In a new
+                        directory, create the app.js file, the main file of the
+                        Node.js app. Tell Node.js that the Express module is
+                        required, and create the Express app. Register a route
+                        so that requests for <code>/hello</code> will be handled
+                        by the anonymous function shown in <xref
+                            href="#listing1"/>. The handler for
+                        <code>/hello</code> uses the Express helpers to send a
+                        simple text response. The send method handles details
+                        such as defaulting the content type and length. When
+                        using Express, we can ignore some of the details of the
+                        underlying HTTP conversation.</p>
+                    <!-- CODE LISTING
+For authors: You can include code listings to illustrate your points. 
+Limit the width of code lines to no more than 105 characters. If you preview the 
+content, any code line that exceeds the maximum available width (105 characters) 
+will be displayed in an overlay or "pop-up" window. Long lines do not 
+autowrap, so check your code listings carefully and correct as 
+needed. When counting characters, count blanks. Count 
+symbols or character entities like "&lt;" and "&quot;" as a 
+single character.
+
+Avoid hard-coding blank spaces or tabs at the end of a line of sample code.
+Avoid using tabs at the beginning of a line of sample code. If you must indent, 
+use blank spaces. Do not use CDATA tags. If you need to display XML tags, 
+such as angle brackets, in your sample code, use &lt; and &gt;. Do not use 
+color. If you want to highlight a portion of your sample code, use strong
+(<strong> and </strong>) instead.
+
+For the code listing itself, type or paste in ASCII code with proper keyboard 
+spacing. Use the space key to indent lines. Use &lt; to represent a less-than 
+symbol and &gt; to represent a greater-than symbol. Use &amp; for an 
+ampersand.  If needed for emphasis, use <strong> and </strong> 
+as shown below. 
+
+Include a <heading> element to provide a caption for each code listing.  If
+auto-number="yes" is specified on the <dw-article> element, your heading text 
+will be prefixed with the word "Listing" and the listing number, such as 
+"Listing 1. " or "Listing 2. ".  -->
+                    <code-listing>
+                        <heading refname="listing1">Hello Node.js</heading>
+                        <pre>
+var port = (process.env.VCAP_APP_PORT || 3000);
+var express = require("express");
+
+var app = express();
+
+app.get('/hello', function(req, res) {
+    res.send("Hello world.");
+});
+
+app.listen(port);
+console.log("Server listening on port " + port);
+</pre>
+                    </code-listing>
+                    <p><strong>Note:</strong> The program could be even simpler,
+                        but a few additional lines of code enable it to run in
+                        the CloudFoundry runtime. In CloudFoundry, the app will
+                        be relocated to a different port (the port can be
+                        discovered from the environment).</p>
+                </li>
+
+                <li>Give Node.js some additional information about the app, as
+                    shown in <xref href="#listing2"/>. <p> Create a
+                        <code>package.json</code> file to tell the app that the
+                        Express module will be used, and name the app "Simple
+                        Sentiment Analysis App." Since this app is not intended
+                        to be published to the NPM registry, you can mark it as
+                        private. Finally, declare that the app depends on a 3.x
+                        version of the Express module.</p>
+                    <code-listing>
+                        <heading refname="listing2">package.json</heading>
+                        <pre>
+package.json for Hello Node
+{
+  "name": "SimpleSentimentAnalysisApp",
+  "description": "Simple Sentiment Analysis App",
+  "version": "0.9.0",
+  "private": true,
+  "dependencies": {
+    "express": "3.x"
+  }
+}
+</pre>
+                    </code-listing>
+                </li>
+            </ol>
+            <!-- H3, H4, H5 HEADINGs. 
+For authors: These headings organize major sections into smaller units. 
+If you need to refer to this heading, fill in a unique refname; otherwise, 
+leave the refname attribute blank. You don't need to add the values for 
+the inline-commenting-id attributes. The developerWorks editor will add those. -->
+            <heading refname="" type="h3" inline-commenting-id="cmt_3">Run and
+                test your Hello Node.js app</heading>
+
+            <p>Next, run and test the Hello Node.js app using these steps:</p>
+            <ol>
+                <li>Before running your app, prepare the node environment using
+                    NPM to fetch the dependencies declared for the app (and
+                    their dependencies and so on). <figure>
+                        <heading refname="fig2">Prepare the node
+                            environment</heading>
+                        <img
+                            alt="Screen shot of running the npm install command"
+                            height="169" src="fig2.jpg" width="610"/>
+                    </figure>
+                    <p>The result of a successful NPM install is the creation of
+                        the <code>node_modules</code> directory, populated with
+                        the required modules.</p></li>
+                <li>Type <code>node app.js</code> at the command line. <figure>
+                        <heading refname="fig3">Run the node app.js
+                            command</heading>
+                        <img width="322" height="29" src="fig3.jpg"
+                            alt="Screen shot of running the node app.js command"
+                        />
+                    </figure>
+                    <p>The message "Server listening on port 3000" confirms that
+                        the app has started and is listening for
+                    requests.</p></li>
+
+                <li>Test the behavior of the app by pointing a browser to <a
+                        href="http://localhost:3000/hello"
+                        >http://localhost:3000/hello</a>. <figure>
+                        <heading refname="fig4">Test the behavior of the
+                            app</heading>
+                        <img
+                            alt="Screen shot of pointing a browser to //localhost:3000/hello"
+                            height="116" src="fig4.jpg" width="292"/>
+                    </figure>
+                </li>
+            </ol>
+
+            <heading refname="" type="h2" back-to-top="no"
+                inline-commenting-id="cmt_4">Step 2. Create an app in Bluemix and bind it to a Watson Language Translation service</heading>
+
+            <p>Now that your basic app is running and the environment is set up,
+                it's time to add some real function using the very cool
+                    <strong>sentiment</strong> module by Andrew Sliwinsky. He
+                describes it as "a Node.js module that uses the AFINN-111
+                wordlist to perform sentiment analysis on arbitrary blocks of
+                input text." This is a relatively simple implementation of
+                sentiment analysis, as you'll see. It simply scores the words in
+                your text using a dictionary of English words that have been
+                rated for positive or negative sentiment.</p>
+
+            <ol>
+                <li>To begin using the sentiment module, update the
+                    <code>package.json</code> to include it as a dependency: <code-listing>
+                        <heading refname="listing3">Update
+                            package.json</heading>
+                        <pre>
+{
+  "name": "SimpleSentimentAnalysisApp",
+  "description": "Simple Sentiment Analysis App",
+  "version": "0.9.0",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    <strong>"sentiment": "0.2.1"</strong>
+  }
+}
+</pre>
+                    </code-listing>
+                </li>
+
+                <li>Tell Node.js to get this new module with the command
+                    <code>npm
+                        update</code>. (Note: The
+                    docs suggest that <code>npm install</code> should also have
+                    picked up the new dependency, but that was not the behavior
+                    I saw.) </li>
+
+                <li>Require the new sentiment module: <code-listing>
+                        <pre>
+var express = require("express");
+</pre>
+                    </code-listing>
+                </li>
+
+                <li>Create another route to experiment with the sentiment
+                    module: <code-listing>
+                        <heading refname="listing4">The sentiment analysis app
+                            interface code</heading>
+                        <pre>
+app.get('/testSentiment',
+    function (req, res) {
+        var response = "&lt;HEAD&gt;" +
+          "&lt;title&gt;Twitter Sentiment Analysis&lt;/title&gt;\n" +
+          "&lt;/HEAD&gt;\n" +
+          "&lt;BODY&gt;\n" +
+          "&lt;P&gt;\n" +
+          "Welcome to the Twitter Sentiment Analysis app.  " +   
+          "What phrase would you like to analzye?\n" +                
+          "&lt;/P&gt;\n" +
+          "&lt;FORM action=\"/testSentiment\" method=\"get\"&gt;\n" +
+          "&lt;P&gt;\n" +
+          "Enter a phrase to evaluate: &lt;INPUT type=\"text\" name=\"phrase\"&gt;&lt;BR&gt;\n" +
+          "&lt;INPUT type=\"submit\" value=\"Send\"&gt;\n" +
+          "&lt;/P&gt;\n" +
+          "&lt;/FORM&gt;\n" +
+          "&lt;/BODY&gt;";
+        var phrase = req.query.phrase;
+        if (!phrase) {
+            res.send(response);
+        } else {
+            sentiment(phrase, function (err, result) {
+                response = 'sentiment(' + phrase + ') === ' + result.score;
+                res.send(response);
+            });
+        }
+    });
+</pre>
+                    </code-listing>
+                    <p>Apologies to web architects and designers everywhere for
+                        the brute force simplicity of this new function. I
+                        promise we’ll do something more intelligent later. For
+                        now, we’re going to put up a form that lets us enter a
+                        phrase and then respond with the rating provided by
+                        sentiment. The key function call is
+                            <strong><code>sentiment(phrase, function)</code></strong>.
+                        In the spirit of Node.js, the sentiment library is
+                        asynchronous, so the result of the analysis is processed
+                        by a callback function.</p></li>
+
+                <li>Restart the app and point a browser to <a
+                        href="http://localhost:3000/testSentiment"
+                        >http://localhost:3000/testSentiment</a>. <figure>
+                        <heading refname="fig5">The sentiment analysis app user
+                            interface</heading>
+                        <img
+                            alt="Screen capture showing a browser pointing to localhost:3000/testSentiment"
+                            height="139" src="fig5.jpg" width="432"/>
+                    </figure>
+                </li>
+            </ol>
+
+            <pullquote>
+                <pullquote-text>Et voil<agrave/>, a fabulous user interface for
+                    sentiment analysis!</pullquote-text>
+                <pullquote-source/>
+            </pullquote>
+
+            <heading refname="" type="h3" inline-commenting-id="cmt_5">Scoring
+                sample sentiments</heading>
+
+            <p>Here are some hypothetical results from our sentiment analysis
+                app:</p>
+            <!-- TABLE   
+For authors: You can include tables in your article.  Pick the table format
+that best fits your needs and use the coding shown, including attributes
+such as scope and class.
+Each table needs a caption; use either the <heading> element (preferred) or 
+the <caption> element for the caption. If auto-number="yes" is specified 
+on the <dw-article> element, your heading text will be prefixed with the word 
+"Table" and the table number, such as "Table 1. " or "Table 2. ".
+            -->
+            <table border="0" cellpadding="0" cellspacing="0"
+                class="ibm-data-table">
+                <heading refname="table1">Hypothetical results of analyzing
+                    "Node.js"</heading>
+                <thead>
+                    <tr>
+                        <th scope="col">Sentiment</th>
+                        <th class="ibm-numeric" scope="col">Score</th>
+                        <th scope="col">Interpretation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="ibm-table-row" scope="row">Node.js is cool, I
+                            love it</th>
+                        <td class="ibm-numeric">4</td>
+                        <td>Very positive sentiment</td>
+                    </tr>
+                    <tr>
+                        <th class="ibm-table-row" scope="row">Node.js is uncool,
+                            I hate it</th>
+                        <td class="ibm-numeric">-3</td>
+                        <td>Very negative sentiment</td>
+                    </tr>
+                    <tr>
+                        <th class="ibm-table-row" scope="row">Mi piace Node.js.
+                            Node.js <eacute/> bellissima</th>
+                        <td class="ibm-numeric">0</td>
+                        <td>No sentiment detected. Sentiment has only an English
+                            dictionary.</td>
+                    </tr>
+                    <tr>
+                        <th class="ibm-table-row" scope="row">Node.js is not
+                            cool, I do not love it</th>
+                        <td class="ibm-numeric">4</td>
+                        <td>Oops! Very positive, same score as the first
+                            example. Sentiment is not aware of grammar or
+                            negation.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>You can see the limitations of this approach, namely that the
+                sentiment module only has an English dictionary and is not aware
+                of grammar or negation. Still, it’s probably good enough to get
+                the gist of most tweets.</p>
+
+            <heading refname="" type="h2" back-to-top="no"
+                inline-commenting-id="cmt_6">Step 3. Register your application with Spotify.</heading>
+
+            <p>The other essential component of the app is the connection to
+            Spotify, so that it can retrieve songs and playlists.</p>
+
+            
+            <!-- SIDEBAR   
+For authors:  You can include sidebars in the body of your article. 
+They default to right alignment, so make sure their placement does 
+not collide with code listings, tables, or other elements. Don't include 
+a heading. Place all sidebar text inside one or multiple paragraphs. -->
+            <sidebar>
+                <p><strong>Twitter’s Stream interface</strong> is perfect for
+                    observing trends in sentiment, since it allows access to all
+                    of the Twitter content on a topic over time.</p>
+                <p>Our app works only with the public Twitter stream, so
+                    Twitter’s Application-only Authentication scheme is
+                    sufficient. This simplified OAuth exchange doesn’t require a
+                    user login or consent prompt. Using this method does require
+                    an app-specific set of OAuth keys, which are encoded in the
+                    app. For more, see <a
+                        href="https://dev.twitter.com/docs/streaming-apis"
+                        >Twitter streaming APIs</a>.</p>
+            </sidebar>
+
+            <ol>
+              <li>Go to <a href="https://developer.spotify.com/my-applications">developer.spotify.com</a> and login using your Spotify (or Facebook account).  </li>
+
+                <li>Obtain a set of keys by registering it under your Twitter
+                    developer account. Go to the Twitter "My Applications" page
+                    to create and manage the app.</li>
+
+                <li>Add a couple of functions to your app to test the connection
+                    to Twitter. First construct a twitter object using ntwitter
+                    and OAuth keys, then make a simple call to verify those
+                    credentials. <br/><br/>
+                    <code-listing>
+                        <heading refname="listing5">Testing your Twitter
+                            connection</heading>
+                        <pre>
+// Sample keys for demo and article - you must get your own keys 
+//   if you clone this application!
+// Create your own app at: https://dev.twitter.com/apps
+var tweeter = new twitter({
+    consumer_key: 'your',
+    consumer_secret: 'keys',
+    access_token_key: ‘go',
+    access_token_secret: 'here'
+});
+
+app.get('/twitterCheck', function (req, res) {
+    tweeter.verifyCredentials(function (error, data) {
+        res.send("Hello, " + data.name + ".  I am in your twitters.");
+    });
+});
+</pre>
+                    </code-listing>
+                </li>
+
+                <li>Restart the app and visit <code>/twitterCheck</code> to see
+                    that the connection and login to Twitter are working: <figure>
+                        <heading refname="fig6">Test the connection to
+                            Twitter</heading>
+                        <img alt="Test the connection to Twitter" height="91"
+                            src="fig0-0.png" width="432"/>
+                    </figure>
+                    <p>Note that it does identify me as the owner of the app
+                        that is connecting.</p></li>
+
+                <li>Now that the connection to Twitter is established, add a
+                    function to monitor Twitter for one or more phrases.
+                    ntwitter provides a very simple method for doing this: <ol
+                        type="a">
+                        <li>Call <code>stream()</code> and pass the phrase to be
+                            monitored.</li>
+
+                        <li>Use a callback function to process tweets as they
+                            arrive. <p>The Twitter Stream API allows the app to
+                                open a Stream and keep pulling data as long as
+                                it is available. This function works perfectly
+                                for the Node.js app, because it can keep a
+                                stream open on the server and update counters
+                                and average sentiment as it processes the
+                                stream.</p></li>
+
+                        <li>Create a simple interface to set the phrase to be
+                            monitored and to display the results as they come
+                            in. A more sophisticated app could store the Tweets
+                            to a database for more complex processing.</li>
+                    </ol></li>
+            </ol>
+
+            <p>Listing 6 shows the essence of the code to open a stream and log
+                a sample of the tweets:</p>
+
+            <code-listing>
+                <heading refname="listing6">Opening a stream and logging
+                    tweets</heading>
+                <pre>
+app.get('/watchTwitter', function (req, res) {
+    var stream;
+    var testTweetCount = 0;
+    var phrase = 'bieber';
+    tweeter.verifyCredentials(function (error, data) {
+        if (error) {
+            res.send("Error connecting to Twitter: " + error);
+        }
+        stream = tweeter.stream('statuses/filter', {
+            'track': phrase
+        }, function (stream) {
+            res.send("Monitoring Twitter for \'" + phrase 
+                + "\'...  Logging Twitter traffic.");
+            stream.on('data', function (data) {
+                testTweetCount++;
+                // Update the console every 50 analyzed tweets
+                if (testTweetCount % 50 === 0) {
+                    console.log("Tweet #" + testTweetCount + ":  " + data.text);
+                }
+            });
+        });
+    });
+});
+</pre>
+            </code-listing>
+
+            <heading refname="" type="h2" back-to-top="no"
+                inline-commenting-id="cmt_7">Step 4. Put it all
+                together</heading>
+            <p>Okay, now we have all the parts in place to complete your
+                app:</p>
+            <ul>
+                <li>A basic Express app to serve up various pages</li>
+                <li>A sentiment analysis function to assess the sentiment of
+                    text</li>
+                <li>A connection to Twitter to provide a source of tweets to
+                    analyze</li>
+            </ul>
+
+            <p>Now we just need to combine them to do something interesting. The
+                finished app will prompt the user for a phrase, call Twitter to
+                open a stream filtered on the phrase, analyze the sentiment of
+                each matching tweet, and create a page to monitor the sentiment
+                over time.</p>
+
+            <p>Keeping the user interface very simple, Listing 7 shows the full
+                application, in all its Old School Struts-style glory:</p>
+
+            <code-listing>
+                <heading refname="listing7">The full application</heading>
+                <pre>
+var tweetCount = 0;
+var tweetTotalSentiment = 0;
+var monitoringPhrase;
+
+function resetMonitoring() {
+    monitoringPhrase = "";
+}
+
+function beginMonitoring(phrase) {
+    var stream;
+    // cleanup if we're re-setting the monitoring
+    if (monitoringPhrase) {
+        resetMonitoring();
+    }
+    monitoringPhrase = phrase;
+    tweetCount = 0;
+    tweetTotalSentiment = 0;
+    tweeter.verifyCredentials(function (error, data) {
+        if (error) {
+            return "Error connecting to Twitter: " + error;
+        } else {
+            stream = tweeter.stream('statuses/filter', {
+                'track': monitoringPhrase
+            }, function (stream) {
+                console.log("Monitoring Twitter for " + monitoringPhrase);
+                stream.on('data', function (data) {
+                    // only evaluate the sentiment of English-language tweets
+                    if (data.lang === 'en') {
+                        sentiment(data.text, function (err, result) {
+                            tweetCount++;
+                            tweetTotalSentiment += result.score;
+                        });
+                    }
+                });
+            });
+            return stream;
+        }
+    });
+}
+
+function sentimentImage() {
+    var avg = tweetTotalSentiment / tweetCount;
+    if (avg &gt; 0.5) { // happy
+        return "/images/excited.png";
+    }
+    if (avg &lt; -0.5) { // angry
+        return "/images/angry.png";
+    }
+    // neutral
+    return "/images/content.png";
+}
+
+app.get('/',
+    function (req, res) {
+        var welcomeResponse = "&lt;HEAD&gt;" +
+            "&lt;title&gt;Twitter Sentiment Analysis&lt;/title&gt;\n" +
+            "&lt;/HEAD&gt;\n" +
+            "&lt;BODY&gt;\n" +
+            "&lt;P&gt;\n" +
+            "Welcome to the Twitter Sentiment Analysis app.&lt;br&gt;\n" + 
+            "What would you like to monitor?\n" +
+            "&lt;/P&gt;\n" +
+            "&lt;FORM action=\"/monitor\" method=\"get\"&gt;\n" +
+            "&lt;P&gt;\n" +
+            "&lt;INPUT type=\"text\" name=\"phrase\"&gt;&lt;br&gt;&lt;br&gt;\n" +
+            "&lt;INPUT type=\"submit\" value=\"Go\"&gt;\n" +
+            "&lt;/P&gt;\n" + "&lt;/FORM&gt;\n" + "&lt;/BODY&gt;";
+        if (!monitoringPhrase) {
+            res.send(welcomeResponse);
+        } else {
+            var monitoringResponse = "&lt;HEAD&gt;" +
+                "&lt;META http-equiv=\"refresh\" content=\"5; URL=http://" +
+                req.headers.host +
+                "/\"&gt;\n" +
+                "&lt;title&gt;Twitter Sentiment Analysis&lt;/title&gt;\n" +
+                "&lt;/HEAD&gt;\n" +
+                "&lt;BODY&gt;\n" +
+                "&lt;P&gt;\n" +
+                "The Twittersphere is feeling&lt;br&gt;\n" +
+                "&lt;IMG align=\"middle\" src=\"" + sentimentImage() + "\"/&gt;&lt;br&gt;\n" +
+                "about " + monitoringPhrase + ".&lt;br&gt;&lt;br&gt;" +
+                "Analyzed " + tweetCount + " tweets...&lt;br&gt;" +
+                "&lt;/P&gt;\n" +
+                "&lt;A href=\"/reset\"&gt;Monitor another phrase&lt;/A&gt;\n" +
+                "&lt;/BODY&gt;";
+            res.send(monitoringResponse);
+        }
+    });
+</pre>
+            </code-listing>
+
+            <p>We’ve finally put something at the root path of the app as
+                Listing 7 shows. The first time through, the app presents a
+                welcome prompt and gathers a phrase to monitor. It then sets up
+                the monitoring stream and presents a results page. The tweeter’s
+                stream callback is updated to pass the tweet contents through
+                the sentiment function, increment the tweet count, and record
+                the sentiment. Non-English tweets are filtered out.</p>
+
+            <p>For presentation purposes, the app uses the
+                <code>sentimentImage()</code> function, which returns an image
+                URL for a given sentiment value. The ranges for happy and grumpy
+                are arbitrary. I found the range of sentiment to be surprisingly
+                narrow for most topics, maybe due to the relative shortness of
+                tweets. Feel free to play with these ranges.</p>
+
+            <p>So let’s give it a try. Here are the results of a few test
+                runs:</p>
+
+            <figure>
+                <heading refname="">Twittersphere is positive about Justin
+                    Bieber</heading>
+                <img
+                    alt="Smiling face icon expressing positive sentiment for the topic                     'Justin Beiber' and the number of tweets analzyed (24)"
+                    height="244" src="fig7.jpg" width="208"/>
+            </figure>
+
+            <figure>
+                <heading refname="">Twittersphere is ambivalent about
+                    Syria</heading>
+                <img
+                    alt="Neutral face icon expressing neutral sentiment for the topic                          'Syria' and the number of tweets analzyed (5)"
+                    height="242" src="fig9.jpg" width="205"/>
+            </figure>
+
+            <figure>
+                <heading refname="">Twittersphere is angry about NSA, Snowden,
+                    Manning, PRISM</heading>
+                <img
+                    alt="Ambivalent face icon expressing angry sentiment for the topics                       'NSA, Snowden, PRISM' and the number of tweets analzyed (4)"
+                    height="245" src="fig8.jpg" width="222"/>
+            </figure>
+
+            <heading type="h2" refname="tools" back-to-top="no"
+                inline-commenting-id="cmt_8">Additional tooling
+                considerations</heading>
+
+            <p>In Step 1, I showed how you can use the <code>node</code> and
+                <code>npm</code> commands to manage and run the application. You
+                can easily do all of the coding with a text editor. However, in
+                developing the app, I actually used a couple of other tools to
+                ease my development.</p>
+
+            <p>Also, I ultimately wanted to push the app to a Cloud
+                Foundry-compatible Node.js runtime environment, such as <a
+                    href="http://www.cloudfoundry.com">CloudFoundry.com</a> or
+                IBM’s emerging <a
+                    href="http://www.ibm.com/software/ebusiness/jstart/bluemix/index.html "
+                    >BlueMix platform</a>. So the final app includes a few extra
+                files required for that environment: the manifest.yml file
+                describes the app and its resource needs to the Cloud Foundry
+                runtime, and the npm-shrinkwrap.json files tell the Cloud
+                Foundry Node.js runtime exactly which modules the app should be
+                deployed with.</p>
+
+            <heading refname="" type="h2" back-to-top="no"
+                inline-commenting-id="cmt_9">Conclusion</heading>
+
+            <p>In developing this app using Node.js, Express, ntwitter, and
+                sentiment, I got a real appreciation for how easy it is to
+                consume capabilities like Twitter access and sentiment analysis
+                when they are packaged as Node.js modules. It’s easy to see why
+                Node.js is so popular for developing web and mobile apps.</p>
+
+            <p>I'm now curious to try using Express to add a more professional
+                user interface to the app. I think there's plenty of room to
+                improve it. ; )</p>
+
+            <!-- RELATED-TOPICS-BLOCK - REQUIRED -->
+            <related-topics-block>
+                <link>
+                    <text>Node.js</text>
+                    <url>http://www.ibm.com/developerworks/topics/nodejs/</url>
+                </link>
+                <link>
+                    <text>JavaScript</text>
+                    <url>http://www.ibm.com/developerworks/topics/javascript/</url>
+                </link>
+                <link>
+                    <text>Social analytics</text>
+                    <url>http://www.ibm.com/developerworks/topics/social data analytics/</url>
+                </link>
+            </related-topics-block>
+            <!-- END OF ARTICLE BODY
+For developerWorks editor use only. -->
+        </docbody>
+        <!-- LINK-TO-ENGLISH - OPTIONAL 
+If this article is on a local site, this include this link to the English language
+article. -->
+        <link-to-english/>
+    </dw-article>
+</dw-document>
