@@ -335,8 +335,7 @@ material, you can use "watch" or "read" elements. -->
                     >Additional tooling considerations</a>.</p>
 
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_2">Step 1. Build an Express
-                application</heading>
+                inline-commenting-id="cmt_2">Step 1. Fork the application code from github</heading>
 
             <!-- MONOSPACE FONT 
 For authors:  Highlight code elements (the name of a command, class, 
@@ -344,7 +343,7 @@ object, method, code snippet, or anything the user types in) in a sentence using
 the <code> element for monospace font.  Within the <code> element, you can 
 have up to 105 consecutive characters without a space. -->
             <ol>
-                <li>Run the <code>node</code> and <code>npm</code> commands: <!-- FIGURE 
+              <li>Run the <code>node</code> and <code>npm</code> commands: <!-- FIGURE 
 For authors:  You can include graphics in the sections of an article.
 
 Include a <heading> element to provide a caption for each figure.  If
@@ -523,8 +522,7 @@ the inline-commenting-id attributes. The developerWorks editor will add those. -
             </ol>
 
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_4">Step 2. Add sentiment analysis to
-                your application</heading>
+                inline-commenting-id="cmt_4">Step 2. Create an app in Bluemix and bind it to a Watson Language Translation service</heading>
 
             <p>Now that your basic app is running and the environment is set up,
                 it's time to add some real function using the very cool
@@ -695,12 +693,12 @@ on the <dw-article> element, your heading text will be prefixed with the word
                 the gist of most tweets.</p>
 
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_6">Step 3. Connect the application to
-                Twitter</heading>
+                inline-commenting-id="cmt_6">Step 3. Register your application with Spotify.</heading>
 
             <p>The other essential component of the app is the connection to
-                Twitter, so that it can obtain a stream of tweets to
-                analyze.</p>
+            Spotify, so that it can retrieve songs and playlists.</p>
+
+            
             <!-- SIDEBAR   
 For authors:  You can include sidebars in the body of your article. 
 They default to right alignment, so make sure their placement does 
@@ -721,9 +719,12 @@ a heading. Place all sidebar text inside one or multiple paragraphs. -->
             </sidebar>
 
             <ol>
-                <li>Use the ntwitter module, which provides a Node.js interface
-                    to the Twitter API, to request a Stream of public tweets
-                    mentioning one or more keywords.</li>
+              <li>Go to <a href="https://developer.spotify.com/my-applications">developer.spotify.com</a> and login using your Spotify (or Facebook account). <figure>
+              <heading refname="fig6">Create an App 
+              </heading>
+              <img alt="Create a new Spotify App" height="91"
+                   src="fig0-0.png" width="432"/>
+              </figure></li>
 
                 <li>Obtain a set of keys by registering it under your Twitter
                     developer account. Go to the Twitter "My Applications" page
