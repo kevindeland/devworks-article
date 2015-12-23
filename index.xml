@@ -429,7 +429,7 @@ config.spotify = {
 
 module.exports = config;
                       </pre>
-                    </code-listing
+                    </code-listing>
                   </li>
                 </ul>
                 <figure>
