@@ -309,6 +309,7 @@ material, you can use "watch" or "read" elements. -->
                   <li><code>cf api api.ng.bluemix.net</code></li>
                   <li><code>cf login</code></li>
                   <li><code>cf push</code></li>
+                  <li><code>Ctrl+C</code> to cancel the push, after you can see it has failed</li>
                 </ul>
 
                 Note that this push should <strong>fail</strong>, because it requires connection to a Watson Translation Service.
@@ -326,10 +327,12 @@ have up to 105 consecutive characters without a space. -->
                           
          
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_4">Step 2. Create an app in Bluemix and bind it to a Watson Language Translation service</heading>
+                     inline-commenting-id="cmt_4">Step 2. Create a Watson Language Translation service, and bind your Bluemix app to it.</heading>
+            <p>In our last step we got the code and created our Bluemix app. Now we are going to create a Watson Language Translation Service to bind to our application.</p>
 
             <ol>
               <li>Log in to your Bluemix Account on the <a href="https://console.ng.bluemix.net/">Bluemix Console</a></li>
+              
             </ol>
             
             <heading refname="" type="h3" inline-commenting-id="cmt_5">Scoring
