@@ -271,8 +271,13 @@ material, you can use "watch" or "read" elements. -->
             </call-to-action-block>
 
             <call-to-action-block type="read">
-                <text>OAuth 2.0 authentication</text>
-                <url>https://developers.google.com/accounts/docs/OAuth2</url>
+              <text>Uploading your application</text>
+              <url>https://www.ng.bluemix.net/docs/#starters/upload_app.html</url>
+            </call-to-action-block>
+
+            <call-to-action-block type="read">
+              <text>Spotify Authorization Guide</text>
+              <url>https://developer.spotify.com/web-api/authorization-guide/</url>
             </call-to-action-block>
 
             <p>The steps below describe the most basic approach. For more
@@ -361,11 +366,80 @@ have up to 105 consecutive characters without a space. -->
             </figure>
             <p>Continue to the next step to see how to fix this</p>
 
-
-
+            
             <heading refname="" type="h2" back-to-top="no"
                 inline-commenting-id="cmt_6">Step 3. Register your application with Spotify.</heading>
             <p>We cannot yet authenticate because we have not registered our application with Spotify. Follow these steps to do that.</p>
+
+            <ol>
+              <li>Go to your <a href="https://developer.spotify.com/my-applications"> Spotify Developer Account</a> to manage your applications. Log in if necessary.</li>
+              <li>
+                Click on CREATE AN APP
+                <figure>
+                  <heading refname="">Create an App</heading>
+                  <img
+                      alt="Create an App"
+                      height="244" src="SpotifyCreateAnApp.png" width="208"/>
+                </figure>
+              </li>
+              <li>
+                Fill out your application name and description
+                <figure>
+                  <heading refname="">Name your App</heading>
+                  <img
+                      alt="Name your App"
+                      height="244" src="SpotifyNameApp.png" width="208"/>
+                </figure>
+              </li>
+              <li>
+                Fill out your application name and description
+                <figure>
+                  <heading refname="">Name your App</heading>
+                  <img
+                      alt="Name your App"
+                      height="244" src="SpotifyNameApp.png" width="208"/>
+                </figure>
+              </li>
+              <li>
+                Here comes the important part. On this page, we will copy our Client ID and our Client Secret, and we will also specify the Redirect URIs for our app.
+                <ul>
+                  <li>
+                    Copy the Client ID and Client Secret, and paste them into your config.js file.
+                    <figure>
+                      <heading refname="">Client ID and Client Secret</heading>
+                      <img
+                          alt="Client ID and Client Secret"
+                          height="244" src="SpotifyClientIDSecret.png"/>
+                    </figure>
+                    <code-listing>
+                      <heading refname="config0">config.js</heading>
+                      <pre>
+                        var config = {};
+
+config.watson = {
+    username: 'YOUR_USERNAME_HERE',
+    password: 'YOUR_PASSWORD_HERE',
+    version: 'v2'
+};
+
+config.spotify = {
+    client_id: 'eab51140b34a488cab959a8f75b74563', // Your client id
+    client_secret: '17232c3b0e7f4c3596c4d769f4e77589' // Your client secret
+};
+
+module.exports = config;
+                      </pre>
+                    </code-listing
+                  </li>
+                </ul>
+                <figure>
+                  <heading refname="">Name your App</heading>
+                  <img
+                      alt="Name your App"
+                      height="244" src="SpotifyNameApp.png" width="208"/>
+                </figure>
+              </li>
+            </ol>
 
 
             <heading refname="" type="h2" back-to-top="no"
