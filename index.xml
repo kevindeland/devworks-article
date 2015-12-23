@@ -287,6 +287,22 @@ material, you can use "watch" or "read" elements. -->
               <li>Give the repository whatever name you want.</li>
               <li>On your command line, change into whatever repository you would like.<code>git clone git@github.ibm.com:disaster-hack-cio/cuantos-caminos.git</code></li>
               <li><code>cd</code> into your new repository</li>
+              <li>Use your preferred text editor to edit the <code>manifest.yml</code> file
+              <code-listing>
+                <heading refname="manifest">manifest.yml</heading>
+                <pre>
+                  applications:
+                  - name: ~YOUR_APP_NAME_HERE~
+                  memory: 128M
+                  command: node app.js
+                  instances: 1
+                  path: .
+                  env:
+                  NODE_ENV: development
+                </pre>
+              </code-listing>
+              </li>
+
             </ol>
             
             <!-- MONOSPACE FONT 
