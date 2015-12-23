@@ -350,7 +350,7 @@ have up to 105 consecutive characters without a space. -->
               <heading refname="">Looks good so far</heading>
               <img
                   alt="Looks good so far"
-                  height="244" src="LoginScreen.pngx" width="208"/>
+                  height="244" src="LoginScreen.png" width="208"/>
             </figure>
             <p>Let's try logging in with Spotify.</p>
             <figure>
@@ -359,7 +359,7 @@ have up to 105 consecutive characters without a space. -->
                   alt="Invalid Client"
                   height="244" src="InvalidClient.png" width="208"/>
             </figure>
-            <p>Go to the next step to see how to fix this</p>
+            <p>Continue to the next step to see how to fix this</p>
 
 
 
