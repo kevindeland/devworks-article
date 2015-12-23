@@ -282,83 +282,26 @@ material, you can use "watch" or "read" elements. -->
             <heading refname="" type="h2" back-to-top="no"
                 inline-commenting-id="cmt_2">Step 1. Fork the application code from github</heading>
 
+            <ol>
+              <li>Go to <a href="https://github.com/kevindeland/letrista-watson">the git repository</a>, and click on "Fork" in the upper-right-hand corner.</li>
+              <li>Give the repository whatever name you want.</li>
+              <li>On your command line, change into whatever repository you would like.<code>git clone git@github.ibm.com:disaster-hack-cio/cuantos-caminos.git</code></li>
+              <li><code>cd</code> into your new repository</li>
+            </ol>
+            
             <!-- MONOSPACE FONT 
 For authors:  Highlight code elements (the name of a command, class, 
 object, method, code snippet, or anything the user types in) in a sentence using 
 the <code> element for monospace font.  Within the <code> element, you can 
 have up to 105 consecutive characters without a space. -->
-            <ol>
-              <li>Run the <code>node</code> and <code>npm</code> commands: 
-              </li>
-
-              <li>
-                Create the simplest Node.js Express app possible: Hello
-                Node.js (see <xref href="#listing1"/>).
-                <p>In a new directory, create the app.js file, the main file of the
-                Node.js app. Tell Node.js that the Express module is
-                required, and create the Express app. Register a route
-                so that requests for <code>/hello</code> will be handled
-                by the anonymous function shown in <xref
-                href="#listing1"/>. The handler for
-                <code>/hello</code> uses the Express helpers to send a
-                simple text response. The send method handles details
-                such as defaulting the content type and length. When
-              using Express, we can ignore some of the details of the
-              underlying HTTP conversation.</p>
-              </li>
-
-              <li>                 
-                    <code-listing>
-                        <heading refname="listing1">Hello Node.js</heading>
-                        <pre>
-var port = (process.env.VCAP_APP_PORT || 3000);
-var express = require("express");
-
-var app = express();
-
-app.get('/hello', function(req, res) {
-    res.send("Hello world.");
-});
-
-app.listen(port);
-console.log("Server listening on port " + port);
-</pre>
-                    </code-listing>
-            
-              </li>
-
-              <li>Give Node.js some additional information about the app, as
-                    shown in <xref href="#listing2"/>. <p> Create a
-                        <code>package.json</code> file to tell the app that the
-                        Express module will be used, and name the app "Simple
-                        Sentiment Analysis App." Since this app is not intended
-                        to be published to the NPM registry, you can mark it as
-                        private. Finally, declare that the app depends on a 3.x
-                        version of the Express module.</p>
-                    <code-listing>
-                        <heading refname="listing2">package.json</heading>
-                        <pre>
-package.json for Hello Node
-{
-  "name": "SimpleSentimentAnalysisApp",
-  "description": "Simple Sentiment Analysis App",
-  "version": "0.9.0",
-  "private": true,
-  "dependencies": {
-    "express": "3.x"
-  }
-}
-</pre>
-                    </code-listing>
-                </li>
-              
-            </ol>
                           
          
             <heading refname="" type="h2" back-to-top="no"
                 inline-commenting-id="cmt_4">Step 2. Create an app in Bluemix and bind it to a Watson Language Translation service</heading>
 
-            
+            <ol>
+              <li>Log in to your Bluemix Account on the <a href="https://console.ng.bluemix.net/">Bluemix Console</a></li>
+            </ol>
             
             <heading refname="" type="h3" inline-commenting-id="cmt_5">Scoring
                 sample sentiments</heading>
