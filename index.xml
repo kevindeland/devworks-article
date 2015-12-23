@@ -334,9 +334,14 @@ have up to 105 consecutive characters without a space. -->
               <li>Log in to your Bluemix Account on the <a href="https://console.ng.bluemix.net/">Bluemix Console</a></li>
               
             </ol>
+
+            <figure>
+              <heading refname="">Create a new Bluemix Service</heading>
+              <img
+                  alt="Create a new Bluemix Service"
+                  height="244" src="BluemixCreateService.png" width="208"/>
+            </figure>
             
-            <heading refname="" type="h3" inline-commenting-id="cmt_5">Scoring
-                sample sentiments</heading>
 
 
 
