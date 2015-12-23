@@ -333,7 +333,7 @@ have up to 105 consecutive characters without a space. -->
             <ol>
               <li>Log in to your Bluemix Account on the <a href="https://console.ng.bluemix.net/">Bluemix Console</a></li>
               <li>Click on CATALOG to go to the Services</li>
-              <li>Check the <i>Watson</i> checkbox to view the Watson services</li>
+              <li>Check the Watson checkbox on the left-hand panel to filter only the Watson services</li>
               <li>Find and click the Language Translation Service</li>
               <li>Fill in the boxes with your desired app, the desired name of the service, and the Standard plan. Click CREATE to create your new service
               <figure>
