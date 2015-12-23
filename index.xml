@@ -287,6 +287,7 @@ material, you can use "watch" or "read" elements. -->
               <li>Give the repository whatever name you want.</li>
               <li>On your command line, change into whatever repository you would like.<code>git clone git@github.ibm.com:disaster-hack-cio/cuantos-caminos.git</code></li>
               <li><code>cd</code> into your new repository</li>
+              <li><code>cd authorization_code</code></li>
               <li>Use your preferred text editor to edit the <code>manifest.yml</code> file
               <code-listing>
                 <heading refname="manifest">manifest.yml</heading>
@@ -302,8 +303,20 @@ material, you can use "watch" or "read" elements. -->
                 </pre>
               </code-listing>
               </li>
+              <li>
+                Push your application to Bluemix using the following commands
+                <ul>
+                  <li><code>cf api api.ng.bluemix.net</code></li>
+                  <li><code>cf login</code></li>
+                  <li><code>cf push</code></li>
+                </ul>
 
+                Note that this push should <strong>fail</strong>, because it requires connection to a Watson Translation Service.
+
+              </li>
             </ol>
+
+            <p>If you go to your app, you should see that it is not working properly...</p>
             
             <!-- MONOSPACE FONT 
 For authors:  Highlight code elements (the name of a command, class, 
