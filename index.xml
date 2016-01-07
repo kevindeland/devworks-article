@@ -432,12 +432,6 @@ module.exports = config;
                     </code-listing>
                   </li>
                 </ul>
-                <figure>
-                  <heading refname="">Name your App</heading>
-                  <img
-                      alt="Name your App"
-                      height="244" src="SpotifyNameApp.png" width="208"/>
-                </figure>
               </li>
             </ol>
 
@@ -455,126 +449,8 @@ module.exports = config;
                     analyze</li>
             </ul>
 
-            <p>Now we just need to combine them to do something interesting. The
-                finished app will prompt the user for a phrase, call Twitter to
-                open a stream filtered on the phrase, analyze the sentiment of
-                each matching tweet, and create a page to monitor the sentiment
-                over time.</p>
 
-            <p>Keeping the user interface very simple, Listing 7 shows the full
-                application, in all its Old School Struts-style glory:</p>
-
-            <code-listing>
-                <heading refname="listing7">The full application</heading>
-                <pre>
-var tweetCount = 0;
-var tweetTotalSentiment = 0;
-var monitoringPhrase;
-
-function resetMonitoring() {
-    monitoringPhrase = "";
-}
-
-function beginMonitoring(phrase) {
-    var stream;
-    // cleanup if we're re-setting the monitoring
-    if (monitoringPhrase) {
-        resetMonitoring();
-    }
-    monitoringPhrase = phrase;
-    tweetCount = 0;
-    tweetTotalSentiment = 0;
-    tweeter.verifyCredentials(function (error, data) {
-        if (error) {
-            return "Error connecting to Twitter: " + error;
-        } else {
-            stream = tweeter.stream('statuses/filter', {
-                'track': monitoringPhrase
-            }, function (stream) {
-                console.log("Monitoring Twitter for " + monitoringPhrase);
-                stream.on('data', function (data) {
-                    // only evaluate the sentiment of English-language tweets
-                    if (data.lang === 'en') {
-                        sentiment(data.text, function (err, result) {
-                            tweetCount++;
-                            tweetTotalSentiment += result.score;
-                        });
-                    }
-                });
-            });
-            return stream;
-        }
-    });
-}
-
-function sentimentImage() {
-    var avg = tweetTotalSentiment / tweetCount;
-    if (avg &gt; 0.5) { // happy
-        return "/images/excited.png";
-    }
-    if (avg &lt; -0.5) { // angry
-        return "/images/angry.png";
-    }
-    // neutral
-    return "/images/content.png";
-}
-
-app.get('/',
-    function (req, res) {
-        var welcomeResponse = "&lt;HEAD&gt;" +
-            "&lt;title&gt;Twitter Sentiment Analysis&lt;/title&gt;\n" +
-            "&lt;/HEAD&gt;\n" +
-            "&lt;BODY&gt;\n" +
-            "&lt;P&gt;\n" +
-            "Welcome to the Twitter Sentiment Analysis app.&lt;br&gt;\n" + 
-            "What would you like to monitor?\n" +
-            "&lt;/P&gt;\n" +
-            "&lt;FORM action=\"/monitor\" method=\"get\"&gt;\n" +
-            "&lt;P&gt;\n" +
-            "&lt;INPUT type=\"text\" name=\"phrase\"&gt;&lt;br&gt;&lt;br&gt;\n" +
-            "&lt;INPUT type=\"submit\" value=\"Go\"&gt;\n" +
-            "&lt;/P&gt;\n" + "&lt;/FORM&gt;\n" + "&lt;/BODY&gt;";
-        if (!monitoringPhrase) {
-            res.send(welcomeResponse);
-        } else {
-            var monitoringResponse = "&lt;HEAD&gt;" +
-                "&lt;META http-equiv=\"refresh\" content=\"5; URL=http://" +
-                req.headers.host +
-                "/\"&gt;\n" +
-                "&lt;title&gt;Twitter Sentiment Analysis&lt;/title&gt;\n" +
-                "&lt;/HEAD&gt;\n" +
-                "&lt;BODY&gt;\n" +
-                "&lt;P&gt;\n" +
-                "The Twittersphere is feeling&lt;br&gt;\n" +
-                "&lt;IMG align=\"middle\" src=\"" + sentimentImage() + "\"/&gt;&lt;br&gt;\n" +
-                "about " + monitoringPhrase + ".&lt;br&gt;&lt;br&gt;" +
-                "Analyzed " + tweetCount + " tweets...&lt;br&gt;" +
-                "&lt;/P&gt;\n" +
-                "&lt;A href=\"/reset\"&gt;Monitor another phrase&lt;/A&gt;\n" +
-                "&lt;/BODY&gt;";
-            res.send(monitoringResponse);
-        }
-    });
-</pre>
-            </code-listing>
-
-            <p>We’ve finally put something at the root path of the app as
-                Listing 7 shows. The first time through, the app presents a
-                welcome prompt and gathers a phrase to monitor. It then sets up
-                the monitoring stream and presents a results page. The tweeter’s
-                stream callback is updated to pass the tweet contents through
-                the sentiment function, increment the tweet count, and record
-                the sentiment. Non-English tweets are filtered out.</p>
-
-            <p>For presentation purposes, the app uses the
-                <code>sentimentImage()</code> function, which returns an image
-                URL for a given sentiment value. The ranges for happy and grumpy
-                are arbitrary. I found the range of sentiment to be surprisingly
-                narrow for most topics, maybe due to the relative shortness of
-                tweets. Feel free to play with these ranges.</p>
-
-            <p>So let’s give it a try. Here are the results of a few test
-                runs:</p>
+            <p>So let’s give it a try. Here are a few example questions:</p>
 
             <figure>
                 <heading refname="">Twittersphere is positive about Justin
@@ -600,6 +476,17 @@ app.get('/',
                     height="245" src="fig8.jpg" width="222"/>
             </figure>
 
+
+            <heading type="h2" refname="conclusion" back-to-top="no"
+                     inline-commenting-id="conclusion">Conclusion and Next Steps</heading>
+
+            <p>The Translation Service is just one of many Watson Language Services made available on Bluemix. Which of the other Watson Services do you think we could use in conjunction with song lyrics?</p>
+            <ul>
+              <li>Sentiment Analysis -- track the overall sentiments of songs, and then generate playlists which cater to a certain mood.</li>
+              <li>Concept Insights -- extract what concepts artists are singing about, and contrast and compare them.</li>
+              <li>Relationship Extraction (Alchemy API) -- find relationships between subjects, actions, and objects in songs, and build a database of lyrics tools to generate new songs.</li>
+            </ul>
+            
             <heading type="h2" refname="tools" back-to-top="no"
                 inline-commenting-id="cmt_8">Additional tooling
                 considerations</heading>
