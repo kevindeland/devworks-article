@@ -441,12 +441,11 @@ module.exports = config;
             <p>Okay, now we have all the parts in place to complete your
             app. The app defaults to use three playlists: a Rock playlist, a Rap playlist, and a Beatles playlist. Follow these instructions to add your own (please don't add a playlist of your favorite ambient electronic tracks or orchestral arrangements, as they won't have lyrics).</p>
 
-            <p>To add your own Playlist, you need two fields:
+            <p>To add your own Playlist, you need two fields:</p>
             <ol>
               <li>the Spotify id of the user who owns the playlist</li>
               <li>The playlist id</li>
             </ol>
-            </p>
             
             <ol>
               <li>Go to your playlist, in the web browser or native app.</li>
