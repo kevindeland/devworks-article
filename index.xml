@@ -437,18 +437,30 @@ module.exports = config;
 
 
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_7">Step 4. Put it all
-                together</heading>
+                inline-commenting-id="cmt_7">Step 4 (Optional). Add your own playlist to the selection.</heading>
             <p>Okay, now we have all the parts in place to complete your
-                app:</p>
-            <ul>
-                <li>A basic Express app to serve up various pages</li>
-                <li>A sentiment analysis function to assess the sentiment of
-                    text</li>
-                <li>A connection to Twitter to provide a source of tweets to
-                    analyze</li>
-            </ul>
+            app. The app defaults to use three playlists: a Rock playlist, a Rap playlist, and a Beatles playlist. Follow these instructions to add your own (please don't add a playlist of your favorite ambient electronic tracks or orchestral arrangements, as they won't have lyrics).</p>
 
+            <p>To add your own Playlist, you need two fields:
+            <ol>
+              <li>the Spotify id of the user who owns the playlist</li>
+              <li>The playlist id</li>
+            </ol>
+            </p>
+            
+            <ol>
+              <li>Go to your playlist, in the web browser or native app.</li>
+              <li>
+                Click the dropdown menu, and click on "Copy Spotify URI"
+                <img alt="Click on 'Copy Spotify URI'" height="344" src="SpotifyPlaylistDropdown.png" width="150" />
+                
+              </li>
+              
+              <li>Go to the angular file [public/js/quiz.js] and find the variable 'playlist_map'</li>
+              <li>Create a new key in the map with value having your user id and spotify id.</li>
+              <li>Go to the html file [public/index.html] and find where all the playlists are displayed.</li>
+              <li>add a new line, with playlistid=x, where x is the key you used in the previous 2 steps.</li>
+            </ol>
 
             <p>So let’s give it a try. Here are a few example questions:</p>
 
