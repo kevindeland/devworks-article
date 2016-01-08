@@ -478,7 +478,7 @@ module.exports = config;
 
 
             <heading type="h2" refname="conclusion" back-to-top="no"
-                     inline-commenting-id="conclusion">Conclusion and Next Steps</heading>
+                     inline-commenting-id="cmt_8">Conclusion and Next Steps</heading>
 
             <p>The Translation Service is just one of many Watson Language Services made available on Bluemix. Which of the other Watson Services do you think we could use in conjunction with song lyrics?</p>
             <ul>
@@ -488,7 +488,7 @@ module.exports = config;
             </ul>
             
             <heading type="h2" refname="tools" back-to-top="no"
-                inline-commenting-id="cmt_8">Additional tooling
+                inline-commenting-id="cmt_9">Additional tooling
                 considerations</heading>
 
             <p>In Step 1, I showed how you can use the <code>node</code> and
@@ -510,7 +510,7 @@ module.exports = config;
                 deployed with.</p>
 
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_9">Conclusion</heading>
+                inline-commenting-id="cmt_10">Conclusion</heading>
 
             <p>In developing this app using Node.js, Express, ntwitter, and
                 sentiment, I got a real appreciation for how easy it is to
