@@ -457,12 +457,12 @@ module.exports = config;
               
               <li>
                 Go to the angular file [public/js/quiz.js] and find the variable 'playlist_map'
-                <img alt="Add your own playlist here" src="addPlaylistIndexHtml.png" />
+                <img alt="Add your own playlist here" src="addPlaylistIndexHtml.png" height="300" width="500"/>
               </li>
               <li>Create a new key in the map with value having your user id and spotify id.</li>
               <li>
                 Go to the html file [public/index.html] and find where all the playlists are displayed.
-                <img alt="Add your own playlist here" src="addPlaylistQuizJs.png" />
+                <img alt="Add your own playlist here" src="addPlaylistQuizJs.png" height="200" width="600"/>
               </li>
               <li>add a new line, with playlistid=x, where x is the key you used in the previous 2 steps.</li>
             </ol>
