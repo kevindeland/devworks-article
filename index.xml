@@ -471,6 +471,7 @@ module.exports = config;
                      inline-commenting-id="cmt_8">Step 5. Testing Locally</heading>
 
             <ol>
+              <li>Change to your project's root directory.</li>
               <li><code>node app.js</code></li>
               <li>Open your browser and go to <code>localhost:8888</code></li>
             </ol>
@@ -499,9 +500,17 @@ module.exports = config;
                     height="300" src="heyJude.png" width="600"/>
             </figure>
 
+            <heading type="h2" refname="conclusion" back-to-top="no"
+                     inline-commenting-id="cmt_9">Step 6: Pushing to Bluemix</heading>
+
+            <ol>
+              <li>Change to your project's root directory.</li>
+              <li><code>cf push</code></li>
+              <li>Go to browser to see your project in action!</li>
+            </ol>
 
             <heading type="h2" refname="conclusion" back-to-top="no"
-                     inline-commenting-id="cmt_9">Conclusion and Next Steps</heading>
+                     inline-commenting-id="cmt_10">Conclusion and Next Steps</heading>
 
             <p>The Translation Service is just one of many Watson Language Services made available on Bluemix. Which of the other Watson Services do you think we could use in conjunction with song lyrics?</p>
             <ul>
