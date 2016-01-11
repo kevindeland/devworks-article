@@ -455,41 +455,53 @@ module.exports = config;
                 
               </li>
               
-              <li>Go to the angular file [public/js/quiz.js] and find the variable 'playlist_map'</li>
+              <li>
+                Go to the angular file [public/js/quiz.js] and find the variable 'playlist_map'
+                <img alt="Add your own playlist here" src="addPlaylistIndexHtml.png" />
+              </li>
               <li>Create a new key in the map with value having your user id and spotify id.</li>
-              <li>Go to the html file [public/index.html] and find where all the playlists are displayed.</li>
+              <li>
+                Go to the html file [public/index.html] and find where all the playlists are displayed.
+                <img alt="Add your own playlist here" src="addPlaylistQuizJs.png" />
+              </li>
               <li>add a new line, with playlistid=x, where x is the key you used in the previous 2 steps.</li>
             </ol>
 
-            <p>So let’s give it a try. Here are a few example questions:</p>
+            <heading refname="" type="h2" back-to-top="no"
+                     inline-commenting-id="cmt_8">Step 5. Testing Locally</heading>
+
+            <ol>
+              <li><code>node app.js</code></li>
+              <li>Open your browser and go to <code>localhost:8888</code></li>
+            </ol>
+
+            
+            <p>Let’s try our app locally. Here are a few simple example questions:</p>
 
             <figure>
-                <heading refname="">Twittersphere is positive about Justin
-                    Bieber</heading>
+                <heading refname="">Some words don't translate well to Spanish.</heading>
                 <img
-                    alt="Smiling face icon expressing positive sentiment for the topic                     'Justin Beiber' and the number of tweets analzyed (24)"
-                    height="244" src="fig7.jpg" width="208"/>
+                    alt="Some words don't translate well to Spanish"
+                    height="244" src="toker.png" width="400"/>
             </figure>
 
             <figure>
-                <heading refname="">Twittersphere is ambivalent about
-                    Syria</heading>
+                <heading refname="">Some songs have a lot of repetition.</heading>
                 <img
                     alt="Neutral face icon expressing neutral sentiment for the topic                          'Syria' and the number of tweets analzyed (5)"
-                    height="242" src="fig9.jpg" width="205"/>
+                    height="242" src="number9.jpg" width="400"/>
             </figure>
 
             <figure>
-                <heading refname="">Twittersphere is angry about NSA, Snowden,
-                    Manning, PRISM</heading>
+                <heading refname="">Hey, now here's a popular song that a lot of people know.</heading>
                 <img
-                    alt="Ambivalent face icon expressing angry sentiment for the topics                       'NSA, Snowden, PRISM' and the number of tweets analzyed (4)"
-                    height="245" src="fig8.jpg" width="222"/>
+                    alt="Hey Jude"
+                    height="245" src="heyJude.png" width="400"/>
             </figure>
 
 
             <heading type="h2" refname="conclusion" back-to-top="no"
-                     inline-commenting-id="cmt_8">Conclusion and Next Steps</heading>
+                     inline-commenting-id="cmt_9">Conclusion and Next Steps</heading>
 
             <p>The Translation Service is just one of many Watson Language Services made available on Bluemix. Which of the other Watson Services do you think we could use in conjunction with song lyrics?</p>
             <ul>
@@ -498,40 +510,6 @@ module.exports = config;
               <li>Relationship Extraction (Alchemy API) -- find relationships between subjects, actions, and objects in songs, and build a database of lyrics tools to generate new songs.</li>
             </ul>
             
-            <heading type="h2" refname="tools" back-to-top="no"
-                inline-commenting-id="cmt_9">Additional tooling
-                considerations</heading>
-
-            <p>In Step 1, I showed how you can use the <code>node</code> and
-                <code>npm</code> commands to manage and run the application. You
-                can easily do all of the coding with a text editor. However, in
-                developing the app, I actually used a couple of other tools to
-                ease my development.</p>
-
-            <p>Also, I ultimately wanted to push the app to a Cloud
-                Foundry-compatible Node.js runtime environment, such as <a
-                    href="http://www.cloudfoundry.com">CloudFoundry.com</a> or
-                IBM’s emerging <a
-                    href="http://www.ibm.com/software/ebusiness/jstart/bluemix/index.html "
-                    >BlueMix platform</a>. So the final app includes a few extra
-                files required for that environment: the manifest.yml file
-                describes the app and its resource needs to the Cloud Foundry
-                runtime, and the npm-shrinkwrap.json files tell the Cloud
-                Foundry Node.js runtime exactly which modules the app should be
-                deployed with.</p>
-
-            <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_10">Conclusion</heading>
-
-            <p>In developing this app using Node.js, Express, ntwitter, and
-                sentiment, I got a real appreciation for how easy it is to
-                consume capabilities like Twitter access and sentiment analysis
-                when they are packaged as Node.js modules. It’s easy to see why
-                Node.js is so popular for developing web and mobile apps.</p>
-
-            <p>I'm now curious to try using Express to add a more professional
-                user interface to the app. I think there's plenty of room to
-                improve it. ; )</p>
 
             <!-- RELATED-TOPICS-BLOCK - REQUIRED -->
             <related-topics-block>
