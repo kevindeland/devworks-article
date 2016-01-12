@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+images/<?xml version="1.0" encoding="UTF-8"?>
 <!--  developerWorks ARTICLE TEMPLATE for AUTHORS:  V7.0 (ALT1 LAYOUT) -->
 <!-- Welcome, authors!  To make this template easy to use, we've indicated the items 
 you need to fill in, and the items you can ignore (for developerWorks editor use).
@@ -345,7 +345,7 @@ have up to 105 consecutive characters without a space. -->
                 <heading refname="">Create a new Watson Languate Translation Service</heading>
                 <img
                     alt="Create a new Watson Languate Translation Service"
-                    height="244" src="images/CreateWTLS.png" width="208"/>
+                    height="244" src="CreateWTLS.png" width="208"/>
               </figure>
               </li>
               <li>Restage your application to allow it to bind to your new service</li>
@@ -355,14 +355,14 @@ have up to 105 consecutive characters without a space. -->
               <heading refname="">Looks good so far</heading>
               <img
                   alt="Looks good so far"
-                  height="244" src="images/LoginScreen.png" width="208"/>
+                  height="244" src="LoginScreen.png" width="208"/>
             </figure>
             <p>Let's try logging in with Spotify.</p>
             <figure>
               <heading refname="">Invalid Client</heading>
               <img
                   alt="Invalid Client"
-                  height="244" src="images/InvalidClient.png" width="208"/>
+                  height="244" src="InvalidClient.png" width="208"/>
             </figure>
             <p>Continue to the next step to see how to fix this</p>
 
@@ -379,7 +379,7 @@ have up to 105 consecutive characters without a space. -->
                   <heading refname="">Create an App</heading>
                   <img
                       alt="Create an App"
-                      height="244" src="images/SpotifyCreateAnApp.png" width="208"/>
+                      height="244" src="SpotifyCreateAnApp.png" width="208"/>
                 </figure>
               </li>
               <li>
@@ -388,7 +388,7 @@ have up to 105 consecutive characters without a space. -->
                   <heading refname="">Name your App</heading>
                   <img
                       alt="Name your App"
-                      height="244" src="images/SpotifyNameApp.png" width="208"/>
+                      height="244" src="SpotifyNameApp.png" width="208"/>
                 </figure>
               </li>
               <li>
@@ -400,7 +400,7 @@ have up to 105 consecutive characters without a space. -->
                       <heading refname="">Client ID and Client Secret</heading>
                       <img
                           alt="Client ID and Client Secret"
-                          height="244" width="108" src="images/SpotifyClientIDSecret.png"/>
+                          height="244" width="108" src="SpotifyClientIDSecret.png"/>
                     </figure>
                     <code-listing>
                       <heading refname="config0">config.js</heading>
@@ -442,18 +442,18 @@ module.exports = config;
               <li>Go to your playlist, in the web browser or native app.</li>
               <li>
                 Click the dropdown menu, and click on "Copy Spotify URI"
-                <img alt="Click on 'Copy Spotify URI'" height="344" src="images/SpotifyPlaylistDropdown.png" width="150" />
+                <img alt="Click on 'Copy Spotify URI'" height="344" src="SpotifyPlaylistDropdown.png" width="150" />
                 
               </li>
               
               <li>
                 Go to the angular file [public/js/quiz.js] and find the variable 'playlist_map'
-                <img alt="Add your own playlist here" src="images/addPlaylistQuizJs.png" height="300" width="500"/>
+                <img alt="Add your own playlist here" src="addPlaylistQuizJs.png" height="300" width="500"/>
               </li>
               <li>Create a new key in the map with value having your user id and spotify id.</li>
               <li>
                 Go to the html file [public/index.html] and find where all the playlists are displayed.
-                <img alt="Add your own playlist here" src="images/addPlaylistIndexHtml.png" height="200" width="600"/>
+                <img alt="Add your own playlist here" src="addPlaylistIndexHtml.png" height="200" width="600"/>
               </li>
               <li>add a new line, with playlistid=x, where x is the key you used in the previous 2 steps.</li>
             </ol>
@@ -474,21 +474,21 @@ module.exports = config;
                 <heading refname="">Some words don't translate well to Spanish.</heading>
                 <img
                     alt="Some words don't translate well to Spanish"
-                    height="244" src="images/toker.png" width="400"/>
+                    height="244" src="toker.png" width="400"/>
             </figure>
 
             <figure>
                 <heading refname="">Some songs have a lot of repetition.</heading>
                 <img
                     alt="Neutral face icon expressing neutral sentiment for the topic                          'Syria' and the number of tweets analzyed (5)"
-                    height="242" src="images/number9.png" width="400"/>
+                    height="242" src="number9.png" width="400"/>
             </figure>
 
             <figure>
                 <heading refname="">Hey, now here's a popular song that a lot of people know.</heading>
                 <img
                     alt="Hey Jude"
-                    height="300" src="images/heyJude.png" width="600"/>
+                    height="300" src="heyJude.png" width="600"/>
             </figure>
 
             <heading type="h2" refname="conclusion" back-to-top="no"
