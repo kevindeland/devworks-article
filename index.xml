@@ -231,7 +231,7 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
               <second-column>
                 <button-link button-style="blue">
                   <text>Get the code at GitHub</text>
-                  <url>https://hub.jazz.net/project/srich/Sentiment%20Analysis%20App</url><!-- TODO -->
+                  <url>https://hub.jazz.net/project/kevindeland/cuantos-caminos</url><!-- TODO -->
                 </button-link>
               </second-column>
             </button-block-two-column>
@@ -257,6 +257,13 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
                        >RapGenius-JS module</a>: Provides a client that enables you to query genius.com (formerly rapgenius.com) and retrieve information about rap and rock artists and songs.</li>
               </ul>
               </li>
+              <li>
+                cloud foundry command line interface
+              </li>
+              <li>
+                github command line
+              </li>
+              
             </ol>
 
             <!-- CALL-TO-ACTION-BLOCK - OPTIONAL  
@@ -289,11 +296,19 @@ material, you can use "watch" or "read" elements. -->
 
             <ol>
               <li>Go to <a href="https://github.com/kevindeland/letrista-watson">the git repository</a>, and click on "Fork" in the upper-right-hand corner.</li>
-              <li>Give the repository whatever name you want.</li>
-              <li>On your command line, change into whatever repository you would like.<code>git clone git@github.ibm.com:disaster-hack-cio/cuantos-caminos.git</code></li>
-              <li><code>cd</code> into your new repository</li>
-              <li><code>cd authorization_code</code></li>
-              <li>Use your preferred text editor to edit the <code>manifest.yml</code> file
+              <li>Name the repository whatever name you would like.</li>
+              <li>
+                In your command line, change into whatever repository you would like and clone from the git repo:
+                <code>git clone git@github.ibm.com:disaster-hack-cio/cuantos-caminos.git</code>
+              </li>
+              <li>
+                <code>cd</code> into your new repository
+              </li>
+              <li>
+                <code>cd authorization_code</code>
+              </li>
+              <li>
+                Use your preferred text editor to edit the <code>manifest.yml</code> file
               <code-listing>
                 <heading refname="manifest">manifest.yml</heading>
                 <pre>
@@ -322,7 +337,7 @@ material, you can use "watch" or "read" elements. -->
               </li>
             </ol>
 
-            <p>If you go to your app URL, you should see that it is not working properly...</p>
+            <p>If you go to your app URL, you should see that the app is not working properly. We still need to perform a few more steps to get things running.</p>
             
             <!-- MONOSPACE FONT 
 For authors:  Highlight code elements (the name of a command, class, 
@@ -336,19 +351,30 @@ have up to 105 consecutive characters without a space. -->
             <p>In our last step we got the code and created our Bluemix app. Now we are going to create a Watson Language Translation Service to bind to our application.</p>
 
             <ol>
-              <li>Log in to your Bluemix Account on the <a href="https://console.ng.bluemix.net/">Bluemix Console</a></li>
-              <li>Click on CATALOG to go to the Services</li>
-              <li>Check the Watson checkbox on the left-hand panel to filter only the Watson services</li>
-              <li>Find and click the Language Translation Service</li>
-              <li>Fill in the boxes with your desired app, the desired name of the service, and the Standard plan. Click CREATE to create your new service
-              <figure>
-                <heading refname="">Create a new Watson Languate Translation Service</heading>
-                <img
-                    alt="Create a new Watson Languate Translation Service"
-                    height="244" src="CreateWTLS.png" width="208"/>
-              </figure>
+              <li>
+                Log in to your Bluemix Account on the <a href="https://console.ng.bluemix.net/">Bluemix Console</a>
               </li>
-              <li>Restage your application to allow it to bind to your new service</li>
+              <li>
+                Click on CATALOG to go to the Services
+              </li>
+              <li>
+                Check the Watson checkbox on the left-hand panel to filter only the Watson services
+              </li>
+              <li>
+                Find and click the Language Translation Service
+              </li>
+              <li>
+                Fill in the boxes with your desired app, the desired name of the service, and the Standard plan. Click CREATE to create your new service
+                <figure>
+                  <heading refname="">Create a new Watson Languate Translation Service</heading>
+                  <img
+                      alt="Create a new Watson Languate Translation Service"
+                      height="244" src="CreateWTLS.png" width="208"/>
+                </figure>
+              </li>
+              <li>
+                Restage your application to allow it to bind to your new service
+              </li>
             </ol>
             <p>Great! Your application should now be running! Let's go to our new application url and see what happens. </p>
             <figure>
@@ -364,7 +390,7 @@ have up to 105 consecutive characters without a space. -->
                   alt="Invalid Client"
                   height="244" src="InvalidClient.png" width="208"/>
             </figure>
-            <p>Continue to the next step to see how to fix this</p>
+            <p>Our app is not yet registered with Spotify, causing this error. Continue to the next step to see how to fix this</p>
 
             
             <heading refname="" type="h2" back-to-top="no"
