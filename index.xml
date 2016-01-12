@@ -491,7 +491,7 @@ module.exports = config;
                     height="300" src="heyJude.png" width="600"/>
             </figure>
 
-            <heading type="h2" refname="conclusion" back-to-top="no"
+            <heading type="h2" refname="pushing" back-to-top="no"
                      inline-commenting-id="cmt_9">Step 6: Pushing to Bluemix</heading>
 
             <ol>
