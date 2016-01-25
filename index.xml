@@ -254,8 +254,9 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
                 Node.js web apps.</li>
                 <li><a href="http://simplesentimentanalysis.bluemix.net/"
                        >Watson Developer Cloud</a>: Provides many SDKs that use cognitive computing to solve complex problems.</li>
-                // TODO change to my repo
-                <li><a href="https://github.com/kenshiro-o/RapGenius-JS"
+                <!--// TODO change to my repo -->
+                <li><a href="https://github.com/kevindeland/RapGenius-JS"
+                       <!--"https://github.com/kenshiro-o/RapGenius-JS"-->
                        >RapGenius-JS module</a>: Provides a client that enables you to query genius.com (formerly rapgenius.com) and retrieve information about rap and rock artists and songs.</li>
               </ul>
               </li>
