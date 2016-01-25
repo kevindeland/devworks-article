@@ -474,7 +474,7 @@ module.exports = config;
             </ol>
 
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_8">Step 4 (Optional). Add your own playlist to the selection.</heading>
+                inline-commenting-id="cmt_8">Step 5 (Optional). Add your own playlist to the selection.</heading>
             <p>Okay, now we have all the parts in place to complete your
             app. The app defaults to use three playlists: a Rock playlist, a Rap playlist, and a Beatles playlist. Follow these instructions to add your own (please don't add a playlist of your favorite ambient electronic tracks or orchestral arrangements, as they won't have lyrics).</p>
 
@@ -505,7 +505,7 @@ module.exports = config;
             </ol>
 
             <heading refname="" type="h2" back-to-top="no"
-                     inline-commenting-id="cmt_9">Step 5. Testing Locally</heading>
+                     inline-commenting-id="cmt_9">Step 6. Testing Locally</heading>
 
             <ol>
               <li>Change to your project's root directory.</li>
@@ -538,7 +538,7 @@ module.exports = config;
             </figure>
 
             <heading type="h2" refname="pushing" back-to-top="no"
-                     inline-commenting-id="cmt_10">Step 6: Pushing to Bluemix</heading>
+                     inline-commenting-id="cmt_10">Step 7: Pushing to Bluemix</heading>
 
             <ol>
               <li>Change to your project's root directory.</li>
