@@ -231,19 +231,18 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
               <second-column>
                 <button-link button-style="blue">
                   <text>Get the code at GitHub</text>
-                  <url>https://hub.jazz.net/project/kevindeland/cuantos-caminos</url>
+                  <url>https://hub.jazz.net/project/kevindeland/cuantos-caminos</url><!-- TODO -->
                 </button-link>
               </second-column>
             </button-block-two-column>
 
 
             <heading refname="" type="h2" back-to-top="no"
-                     inline-commenting-id="cmt_1">What you'll need to build a similar
-            app</heading>
-            
+                inline-commenting-id="cmt_1">What you'll need to build a similar
+                app</heading>
+
             <ol>
               <li>A Bluemix account</li>
-              <li>A Spotify developer account</li>
               <li>A basic familiarity with <a
               href="http://www.ibm.com/developerworks/library/j-nodejs/index.html"
               >Node.js</a> and a Node.js development environment.</li>
@@ -254,8 +253,8 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
                 Node.js web apps.</li>
                 <li><a href="http://simplesentimentanalysis.bluemix.net/"
                        >Watson Developer Cloud</a>: Provides many SDKs that use cognitive computing to solve complex problems.</li>
-                <li><a href="https://github.com/kevindeland/RapGenius-JS"
-                       >RapGenius-JS module</a> : Provides a client that enables you to query genius.com (formerly rapgenius.com) and retrieve information about rap and rock artists and songs.</li>
+                <li><a href="https://github.com/kenshiro-o/RapGenius-JS"
+                       >RapGenius-JS module</a>: Provides a client that enables you to query genius.com (formerly rapgenius.com) and retrieve information about rap and rock artists and songs.</li>
               </ul>
               </li>
               <li>
@@ -268,14 +267,14 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
             </ol>
 
             <!-- CALL-TO-ACTION-BLOCK - OPTIONAL  
-                 For authors: Linking directly to immediately relevant resources in the sentence 
-                 is preferred. But you also include supporting, tangential material at or near the 
-                 end of a section for the reader to watch or read if desired.  For this supporting 
-                 material, you can use "watch" or "read" elements. -->
+For authors: Linking directly to immediately relevant resources in the sentence 
+is preferred. But you also include supporting, tangential material at or near the 
+end of a section for the reader to watch or read if desired.  For this supporting 
+material, you can use "watch" or "read" elements. -->
 
             <call-to-action-block type="watch">
-              <text>Getting started with Node.js (video demo)</text>
-              <url>http://www.ibm.com/developerworks/offers/lp/demos/summary/j-jnodejs.html</url>
+                <text>Getting started with Node.js (video demo)</text>
+                <url>http://www.ibm.com/developerworks/offers/lp/demos/summary/j-jnodejs.html</url>
             </call-to-action-block>
 
             <call-to-action-block type="read">
@@ -289,11 +288,11 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
             </call-to-action-block>
 
             <p>The steps below describe the most basic approach. For more
-            advanced tooling to speed your development, see <a href="#tools"
-            >Additional tooling considerations</a>.</p>
+                advanced tooling to speed your development, see <a href="#tools"
+                    >Additional tooling considerations</a>.</p>
 
             <heading refname="" type="h2" back-to-top="no"
-                     inline-commenting-id="cmt_2">Step 1. Fork the application code from github</heading>
+                inline-commenting-id="cmt_2">Step 1. Fork the application code from github</heading>
 
             <ol>
               <li>Go to <a href="https://github.com/kevindeland/letrista-watson">the git repository</a>, and click on "Fork" in the upper-right-hand corner.</li>
@@ -310,22 +309,22 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
               </li>
               <li>
                 Use your preferred text editor to edit the <code>manifest.yml</code> file
-                <code-listing>
-                  <heading refname="manifest">manifest.yml</heading>
-                  <pre>
-                    applications:
-                    - name: ~YOUR_APP_NAME_HERE~
-                    memory: 128M
-                    command: node app.js
-                    instances: 1
-                    path: .
-                    env:
-                    NODE_ENV: development
-                  </pre>
-                </code-listing>
+              <code-listing>
+                <heading refname="manifest">manifest.yml</heading>
+                <pre>
+                  applications:
+                  - name: ~YOUR_APP_NAME_HERE~
+                  memory: 128M
+                  command: node app.js
+                  instances: 1
+                  path: .
+                  env:
+                  NODE_ENV: development
+                </pre>
+              </code-listing>
               </li>
               <li>
-                Create your application on Bluemix using the following commands
+                Push your application to Bluemix using the following commands
                 <ul>
                   <li><code>cf api api.ng.bluemix.net</code></li>
                   <li><code>cf login</code></li>
@@ -341,14 +340,14 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
             <p>If you go to your app URL, you should see that the app is not working properly. We still need to perform a few more steps to get things running.</p>
             
             <!-- MONOSPACE FONT 
-                 For authors:  Highlight code elements (the name of a command, class, 
-                 object, method, code snippet, or anything the user types in) in a sentence using 
-                 the <code> element for monospace font.  Within the <code> element, you can 
-                 have up to 105 consecutive characters without a space. -->
-            
-            
+For authors:  Highlight code elements (the name of a command, class, 
+object, method, code snippet, or anything the user types in) in a sentence using 
+the <code> element for monospace font.  Within the <code> element, you can 
+have up to 105 consecutive characters without a space. -->
+                          
+         
             <heading refname="" type="h2" back-to-top="no"
-                     inline-commenting-id="cmt_3">Step 2. Create a Watson Language Translation service, and bind your Bluemix app to it.</heading>
+                     inline-commenting-id="cmt_4">Step 2. Create a Watson Language Translation service, and bind your Bluemix app to it.</heading>
             <p>In our last step we got the code and created our Bluemix app. Now we are going to create a Watson Language Translation Service to bind to our application.</p>
 
             <ol>
@@ -356,7 +355,7 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
                 Log in to your Bluemix Account on the <a href="https://console.ng.bluemix.net/">Bluemix Console</a>
               </li>
               <li>
-                Click on CATALOG to go to the Catalog of Services
+                Click on CATALOG to go to the Services
               </li>
               <li>
                 Check the Watson checkbox on the left-hand panel to filter only the Watson services
@@ -395,7 +394,7 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
 
             
             <heading refname="" type="h2" back-to-top="no"
-                     inline-commenting-id="cmt_4">Step 3. Register your application with Spotify.</heading>
+                inline-commenting-id="cmt_6">Step 3. Register your application with Spotify.</heading>
             <p>We cannot yet authenticate because we have not registered our application with Spotify. Follow these steps to do that.</p>
 
             <ol>
@@ -419,7 +418,7 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
                 </figure>
               </li>
               <li>
-                On this page, we will copy our Client ID and our Client Secret, and we will also specify the Redirect URIs for our app.
+                Here comes the important part. On this page, we will copy our Client ID and our Client Secret, and we will also specify the Redirect URIs for our app.
                 <ul>
                   <li>
                     Copy the Client ID and Client Secret, and paste them into your config.js file.
@@ -454,8 +453,8 @@ module.exports = config;
             </ol>
 
             <heading refname="" type="h2" back-to-top="no"
-                     inline-commenting-id="cmt_5">Step 4. Register your Application with Genius.com</heading>
-            <p>Genius.com is a website that hosts song lyrics, as well as user-added annotations for those songs. We are going to use their API to search for songs. We will then use this github library (https://github.com/kevindeland/RapGenius-JS) to find the lyrics, which we will then translate with Watson Language Translation. But first, we must register our Application to get an API Key. </p>
+                     inline-commenting-id="cmt_7">Step 4. Register your Application with Genius.com</heading>
+            <p>Genius.com is a website that hosts song lyrics, as well as user-added annotations for those songs. We are going to use their API to access song lyrics, which we will then translate with Watson Language Translation. But first, we must register our Application to get an API Key. </p>
             <ol>
               <li>
                 Go to the <a href="https://genius.com/api-clients">Genius API Client Site</a>.
@@ -470,21 +469,43 @@ module.exports = config;
                 </figure>
               </li>
               <li>
-                Copy and Paste the CLIENT ID and CLIENT SECRET into lib/genius-api.js
-                <code-listing>
-                  <heading refname="config0">config.js</heading>
-                  <pre>
-                    // TODO add code
-
-                  </pre>
-                </code-listing>
-
+                Copy and Paste the CLIENT ID and CLIENT SECRET into [this file] <!--TODO-->
               </li>
             </ol>
 
-            
             <heading refname="" type="h2" back-to-top="no"
-                     inline-commenting-id="cmt_6">Step 5. Testing Locally</heading>
+                inline-commenting-id="cmt_8">Step 5 (Optional). Add your own playlist to the selection.</heading>
+            <p>Okay, now we have all the parts in place to complete your
+            app. The app defaults to use three playlists: a Rock playlist, a Rap playlist, and a Beatles playlist. Follow these instructions to add your own (please don't add a playlist of your favorite ambient electronic tracks or orchestral arrangements, as they won't have lyrics).</p>
+
+            <p>To add your own Playlist, you need two fields:</p>
+            <ol>
+              <li>the Spotify id of the user who owns the playlist</li>
+              <li>The playlist id</li>
+            </ol>
+            
+            <ol>
+              <li>Go to your playlist, in the web browser or native app.</li>
+              <li>
+                Click the dropdown menu, and click on "Copy Spotify URI"
+                <img alt="Click on 'Copy Spotify URI'" height="344" src="SpotifyPlaylistDropdown.png" width="150" />
+                
+              </li>
+              
+              <li>
+                Go to the angular file [public/js/quiz.js] and find the variable 'playlist_map'
+                <img alt="Add your own playlist here" src="addPlaylistQuizJs.png" height="300" width="500"/>
+              </li>
+              <li>Create a new key in the map with value having your user id and spotify id.</li>
+              <li>
+                Go to the html file [public/index.html] and find where all the playlists are displayed.
+                <img alt="Add your own playlist here" src="addPlaylistIndexHtml.png" height="200" width="600"/>
+              </li>
+              <li>add a new line, with playlistid=x, where x is the key you used in the previous 2 steps.</li>
+            </ol>
+
+            <heading refname="" type="h2" back-to-top="no"
+                     inline-commenting-id="cmt_9">Step 6. Testing Locally</heading>
 
             <ol>
               <li>Change to your project's root directory.</li>
@@ -517,7 +538,7 @@ module.exports = config;
             </figure>
 
             <heading type="h2" refname="pushing" back-to-top="no"
-                     inline-commenting-id="cmt_7">Step 6: Pushing to Bluemix</heading>
+                     inline-commenting-id="cmt_10">Step 7: Pushing to Bluemix</heading>
 
             <ol>
               <li>Change to your project's root directory.</li>
@@ -525,40 +546,8 @@ module.exports = config;
               <li>Go to browser to see your project in action!</li>
             </ol>
 
-
-<heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_8">Step 7 (Optional). Add your own playlist to the selection.</heading>
-            <p>Okay, now that we have the app up and running on Bluemix, let's add a bit of our own flair to it. The app defaults to use three playlists: a Classic Rock playlist, a Rap playlist, and a Beatles playlist. Follow these instructions to add your own (avoid playlists of only ambient electronic tracks or orchestral arrangements, as they won't have lyrics).</p>
-
-            <p>To add your own Playlist, you need two fields:</p>
-            <ol>
-              <li>the Spotify id of the user who owns the playlist</li>
-              <li>The playlist id</li>
-            </ol>
-            
-            <ol>
-              <li>Go to your playlist, in the web browser or native app.</li>
-              <li>
-                Click the dropdown menu, and click on "Copy Spotify URI"
-                <img alt="Click on 'Copy Spotify URI'" height="344" src="SpotifyPlaylistDropdown.png" width="150" />
-                
-              </li>
-              
-              <li>
-                Go to the angular file [public/js/quiz.js] and find the variable 'playlist_map'
-                <img alt="Add your own playlist here" src="addPlaylistQuizJs.png" height="300" width="500"/>
-              </li>
-              <li>Create a new key in the map with value having your user id and spotify id.</li>
-              <li>
-                Go to the html file [public/index.html] and find where all the playlists are displayed.
-                <img alt="Add your own playlist here" src="addPlaylistIndexHtml.png" height="200" width="600"/>
-              </li>
-              <li>add a new line, with playlistid=x, where x is the key you used in the previous 2 steps.</li>
-            </ol>
-
-            
             <heading type="h2" refname="conclusion" back-to-top="no"
-                     inline-commenting-id="cmt_9">Conclusion and Next Steps</heading>
+                     inline-commenting-id="cmt_11">Conclusion and Next Steps</heading>
 
             <p>The Translation Service is just one of many Watson Language Services made available on Bluemix. Which of the other Watson Services do you think we could use in conjunction with song lyrics?</p>
             <ul>
