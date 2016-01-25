@@ -231,16 +231,16 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
               <second-column>
                 <button-link button-style="blue">
                   <text>Get the code at GitHub</text>
-                  <url>https://hub.jazz.net/project/kevindeland/cuantos-caminos</url><!-- TODO -->
+                  <url>https://hub.jazz.net/project/kevindeland/cuantos-caminos</url>
                 </button-link>
               </second-column>
             </button-block-two-column>
 
 
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_1">What you'll need to build a similar
-                app</heading>
-
+                     inline-commenting-id="cmt_1">What you'll need to build a similar
+            app</heading>
+            
             <ol>
               <li>A Bluemix account</li>
               <li>A Spotify developer account</li>
@@ -254,7 +254,6 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
                 Node.js web apps.</li>
                 <li><a href="http://simplesentimentanalysis.bluemix.net/"
                        >Watson Developer Cloud</a>: Provides many SDKs that use cognitive computing to solve complex problems.</li>
-                <!--// TODO change to my repo -->
                 <li><a href="https://github.com/kevindeland/RapGenius-JS"
                        >RapGenius-JS module</a> : Provides a client that enables you to query genius.com (formerly rapgenius.com) and retrieve information about rap and rock artists and songs.</li>
               </ul>
@@ -269,14 +268,14 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
             </ol>
 
             <!-- CALL-TO-ACTION-BLOCK - OPTIONAL  
-For authors: Linking directly to immediately relevant resources in the sentence 
-is preferred. But you also include supporting, tangential material at or near the 
-end of a section for the reader to watch or read if desired.  For this supporting 
-material, you can use "watch" or "read" elements. -->
+                 For authors: Linking directly to immediately relevant resources in the sentence 
+                 is preferred. But you also include supporting, tangential material at or near the 
+                 end of a section for the reader to watch or read if desired.  For this supporting 
+                 material, you can use "watch" or "read" elements. -->
 
             <call-to-action-block type="watch">
-                <text>Getting started with Node.js (video demo)</text>
-                <url>http://www.ibm.com/developerworks/offers/lp/demos/summary/j-jnodejs.html</url>
+              <text>Getting started with Node.js (video demo)</text>
+              <url>http://www.ibm.com/developerworks/offers/lp/demos/summary/j-jnodejs.html</url>
             </call-to-action-block>
 
             <call-to-action-block type="read">
@@ -290,11 +289,11 @@ material, you can use "watch" or "read" elements. -->
             </call-to-action-block>
 
             <p>The steps below describe the most basic approach. For more
-                advanced tooling to speed your development, see <a href="#tools"
-                    >Additional tooling considerations</a>.</p>
+            advanced tooling to speed your development, see <a href="#tools"
+            >Additional tooling considerations</a>.</p>
 
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_2">Step 1. Fork the application code from github</heading>
+                     inline-commenting-id="cmt_2">Step 1. Fork the application code from github</heading>
 
             <ol>
               <li>Go to <a href="https://github.com/kevindeland/letrista-watson">the git repository</a>, and click on "Fork" in the upper-right-hand corner.</li>
@@ -311,19 +310,19 @@ material, you can use "watch" or "read" elements. -->
               </li>
               <li>
                 Use your preferred text editor to edit the <code>manifest.yml</code> file
-              <code-listing>
-                <heading refname="manifest">manifest.yml</heading>
-                <pre>
-                  applications:
-                  - name: ~YOUR_APP_NAME_HERE~
-                  memory: 128M
-                  command: node app.js
-                  instances: 1
-                  path: .
-                  env:
-                  NODE_ENV: development
-                </pre>
-              </code-listing>
+                <code-listing>
+                  <heading refname="manifest">manifest.yml</heading>
+                  <pre>
+                    applications:
+                    - name: ~YOUR_APP_NAME_HERE~
+                    memory: 128M
+                    command: node app.js
+                    instances: 1
+                    path: .
+                    env:
+                    NODE_ENV: development
+                  </pre>
+                </code-listing>
               </li>
               <li>
                 Create your application on Bluemix using the following commands
@@ -342,12 +341,12 @@ material, you can use "watch" or "read" elements. -->
             <p>If you go to your app URL, you should see that the app is not working properly. We still need to perform a few more steps to get things running.</p>
             
             <!-- MONOSPACE FONT 
-For authors:  Highlight code elements (the name of a command, class, 
-object, method, code snippet, or anything the user types in) in a sentence using 
-the <code> element for monospace font.  Within the <code> element, you can 
-have up to 105 consecutive characters without a space. -->
-                          
-         
+                 For authors:  Highlight code elements (the name of a command, class, 
+                 object, method, code snippet, or anything the user types in) in a sentence using 
+                 the <code> element for monospace font.  Within the <code> element, you can 
+                 have up to 105 consecutive characters without a space. -->
+            
+            
             <heading refname="" type="h2" back-to-top="no"
                      inline-commenting-id="cmt_3">Step 2. Create a Watson Language Translation service, and bind your Bluemix app to it.</heading>
             <p>In our last step we got the code and created our Bluemix app. Now we are going to create a Watson Language Translation Service to bind to our application.</p>
@@ -359,7 +358,7 @@ have up to 105 consecutive characters without a space. -->
               <li>
                 Click on CATALOG to go to the Catalog of Services
               </li>
-              <li> <!-- TODO add picture -->
+              <li>
                 Check the Watson checkbox on the left-hand panel to filter only the Watson services
               </li>
               <li>
@@ -396,7 +395,7 @@ have up to 105 consecutive characters without a space. -->
 
             
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_4">Step 3. Register your application with Spotify.</heading>
+                     inline-commenting-id="cmt_4">Step 3. Register your application with Spotify.</heading>
             <p>We cannot yet authenticate because we have not registered our application with Spotify. Follow these steps to do that.</p>
 
             <ol>
@@ -471,98 +470,11 @@ module.exports = config;
                 </figure>
               </li>
               <li>
-                Copy and Paste the CLIENT ID and CLIENT SECRET into lib/genius-api.js<!--TODO-->
+                Copy and Paste the CLIENT ID and CLIENT SECRET into lib/genius-api.js
                 <code-listing>
                   <heading refname="config0">config.js</heading>
                   <pre>
-
-var request = require('request');
-
-var auth = {
-    CLIENT_ID: "Fws97DdYqGMu1nb_-CuJC6PQSWFb-EpSgAajmMdNP8I1iUcWEcGiCNozaNRy23bt",
-    CLIENT_SECRET: "BcxbTYkK2piObvicZn5vRwOdg1HXukhMMbZGvBGGlG8MFDJefI04tyIzpyXGlofZbcVeUZzcWGkfAzZmNNwVow",
-    CLIENT_ACCESS_TOKEN: "o7MVUpHVcNcmcG05DDBPeh0QyfX3PJtTP1R3ZHOjBzZU25vq9v7eXFzyEZ69oeqP"
-};
-
-var url = "http://api.genius.com";
-
-
-function search(searchTerm, callback) {
-    searchTerm = encodeURIComponent(searchTerm);
-    
-    var get = {
-        method: 'GET',
-        url: url + '/search?q=' + searchTerm,
-        headers: {
-            Authorization: 'Bearer ' + auth.CLIENT_ACCESS_TOKEN
-        }
-    };
-    
-    request(get, function(err, response, body) {
-        if(err) {
-            console.log('ERROR:', err);
-            callback(err);
-        } else {
-//            console.log(body);
-            var json = JSON.parse(body);
-//            console.log(json);
-            console.log('Found ' + json.response.hits.length + ' hits matching ' + searchTerm);
-
-            callback(null, json.response.hits);
-            
-        }
-    });
-};
-
-function getIdBySongAndArtist(song, artist, callback) {
-    var searchTerm = song + " " + artist;
-    search(searchTerm, function(err, result) {
-        if(err) {
-            callback(err);
-            return;
-        }
-        // TODO pick one song
-        
-        
-        callback(null, result[0].result);
-    });
-};
-
-function getSongById(id, callback) {
-
-    var get = {
-        method: 'GET',
-        url: url + '/songs/' + id,
-        headers: {
-            Authorization: 'Bearer ' + auth.CLIENT_ACCESS_TOKEN
-        }
-    };
-    
-    request(get, function(err, response, body) {
-        if(err) {
-            console.log('ERROR:', err);
-            callback(err);
-        } else {
-           console.log(body);
-            var json = JSON.parse(body);
-//            console.log(json);
-
-            var res = json.response.song;
-            console.log(Object.keys(res));
-            console.log(res);
-            var description_annotation = res['description_annotation'];
-            console.log(description_annotation);
-            callback(null, res);
-            
-        }
-    })
-};
-
-module.exports = {
-    search: search,
-    getIdBySongAndArtist: getIdBySongAndArtist,
-    getSongById: getSongById
-}
+                    // TODO add code
 
                   </pre>
                 </code-listing>
