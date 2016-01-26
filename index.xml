@@ -278,7 +278,7 @@ material, you can use "watch" or "read" elements. -->
             </call-to-action-block>
 
             <call-to-action-block type="read">
-              <text>Uploading your application</text>
+              <text>Uploading your Bluemix application</text>
               <url>https://www.ng.bluemix.net/docs/#starters/upload_app.html</url>
             </call-to-action-block>
 
@@ -287,12 +287,17 @@ material, you can use "watch" or "read" elements. -->
               <url>https://developer.spotify.com/web-api/authorization-guide/</url>
             </call-to-action-block>
 
+            <call-to-action-block type="read">
+              <text>Genius API Docs</text>
+              <url>https://docs.genius.com/</url>
+            </call-to-action-block>
+
             <p>The steps below describe the most basic approach. For more
                 advanced tooling to speed your development, see <a href="#tools"
                     >Additional tooling considerations</a>.</p>
 
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_2">Step 1. Fork the application code from github</heading>
+                inline-commenting-id="cmt_2">Step 1. Fork the application code from Github, and Create Bluemix App</heading>
 
             <ol>
               <li>Go to <a href="https://github.com/kevindeland/letrista-watson">the git repository</a>, and click on "Fork" in the upper-right-hand corner.</li>
@@ -362,11 +367,22 @@ have up to 105 consecutive characters without a space. -->
               </li>
               <li>
                 Find and click the Language Translation Service
-              </li>
-              <li>
-                Fill in the boxes with your desired app, the desired name of the service, and the Standard plan. Click CREATE to create your new service
                 <figure>
                   <heading refname="">Create a new Watson Languate Translation Service</heading>
+                  <img
+                      alt="Create a new Watson Languate Translation Service"
+                      height="244" src="WatsonLTS.png" width="208"/>
+                </figure>
+              </li>
+              <li>
+                Fill in the fields with the below:
+                <ul>
+                  <li>Apps: select your recently created app from the drop-down box</li>
+                  <li>Service Name: choose your own</li>
+                  <li>Standard Plan</li>
+                </ul>
+                <figure>
+                  <heading refname="">Name the Service and Bind it to your app</heading>
                   <img
                       alt="Create a new Watson Languate Translation Service"
                       height="244" src="CreateWTLS.png" width="208"/>
