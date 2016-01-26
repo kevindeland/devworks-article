@@ -313,7 +313,7 @@ material, you can use "watch" or "read" elements. -->
                 <code>cd authorization_code</code>
               </li>
               <li>
-                Use your preferred text editor to edit the <code>manifest.yml</code> file
+                Use your preferred text editor to set your application name in the  <code>manifest.yml</code> file.               You must pick a name for your app, which will help form its URL. If your app name is my-watson-app, then your URL will be http://my-watson-app.mybluemix.net. Remember this URL, as you will need it in a few more places.
               <code-listing>
                 <heading refname="manifest">manifest.yml</heading>
                 <pre>
@@ -326,8 +326,30 @@ material, you can use "watch" or "read" elements. -->
                   env:
                   NODE_ENV: development
                 </pre>
-                NOTE: You must pick a name for your app, which will help form its URL. If your app name is my-watson-app, then your URL will be http://my-watson-app.mybluemix.net. Remember this URL, as you will need it in a few more places.
               </code-listing>
+
+              </li>
+              <li>
+                Add your app URL to the <code>config.js</code> file, so that your application knows which address to redirect to.
+                <code-listing>
+                  <heading refname="config_app">config.js</heading>
+                  <pre>
+
+                    var config = {};
+
+                    var port = process.env.PORT || 8888; 
+
+                    var my_uri = process.env.VCAP_SERVICES ? 'http://YOUR-APP-NAME.mybluemix.net' : 'http://localhost:' + port;
+
+                    config.url = {
+                    port: port,
+                    uri: my_uri,
+                    redirect_uri: my_uri + '/callback'
+                    };
+
+                  </pre>
+                </code-listing>
+
               </li>
               <li>
                 Push your application to Bluemix using the following commands
