@@ -300,11 +300,10 @@ material, you can use "watch" or "read" elements. -->
                 inline-commenting-id="cmt_2">Step 1. Fork the application code from Github, and Create Bluemix App</heading>
 
             <ol>
-              <li>Go to <a href="https://github.com/kevindeland/letrista-watson">the git repository</a>, and click on "Fork" in the upper-right-hand corner.</li>
-              <li>Name the repository whatever name you would like.</li>
+              <li>Go to <a href="https://github.com/kevindeland/letrista-watson">the git repository</a>, and click on "Fork" in the upper-right-hand corner. Give your new repository a name.</li>
               <li>
-                In your command line, change into whatever repository you would like and clone from the git repo:
-                <code>git clone git@github.ibm.com:disaster-hack-cio/cuantos-caminos.git</code>
+                In your command line, change into the repository you would like to put your code in, and clone from the git repo:
+                <p><code>git clone git@github.ibm.com:disaster-hack-cio/cuantos-caminos.git</code></p>
               </li>
               <li>
                 <code>cd</code> into your new repository
@@ -313,7 +312,7 @@ material, you can use "watch" or "read" elements. -->
                 <code>cd authorization_code</code>
               </li>
               <li>
-                Use your preferred text editor to set your application name in the  <code>manifest.yml</code> file.               You must pick a name for your app, which will help form its URL. If your app name is my-watson-app, then your URL will be http://my-watson-app.mybluemix.net. Remember this URL, as you will need it in a few more places.
+                Use your preferred text editor to set your application name in the  <code>manifest.yml</code> file.               You must pick a name for your app, which will help form its URL. If your app name is <strong>my-watson-app</strong>, then your URL will be <strong>http://my-watson-app.mybluemix.net</strong>. Remember this URL, as you will need it in a few more places.
               <code-listing>
                 <heading refname="manifest">manifest.yml</heading>
                 <pre>
@@ -365,7 +364,7 @@ material, you can use "watch" or "read" elements. -->
               </li>
             </ol>
 
-            <p>If you go to your app URL, you should see that the app is not working properly. We still need to perform a few more steps to get things running.</p>
+            <p>If you open your browser and go to your app URL, you should see that the app is not working properly. We still need to perform a few more steps to get things running.</p>
             
             <!-- MONOSPACE FONT 
 For authors:  Highlight code elements (the name of a command, class, 
@@ -380,15 +379,13 @@ have up to 105 consecutive characters without a space. -->
 
             <ol>
               <li>
-                Log in to your Bluemix Account on the <a href="https://console.ng.bluemix.net/">Bluemix Console</a>
+                Log in to your Bluemix Account on the <a href="https://console.ng.bluemix.net/">Bluemix Console</a>.
               </li>
               <li>
-                Click on CATALOG to go to the Services
+                Click on CATALOG to view the Bluemix Services available.
               </li>
               <li>
-                Check the Watson checkbox on the left-hand panel to filter only the Watson services
-              </li>
-              <li>
+                Check the Watson checkbox on the left-hand panel to filter only the Watson services.
                 Find and click the Language Translation Service
                 <figure>
                   <heading refname="">Create a new Watson Languate Translation Service</heading>
@@ -415,7 +412,7 @@ have up to 105 consecutive characters without a space. -->
                 Restage your application to allow it to bind to your new service
               </li>
             </ol>
-            <p>Great! Your application should now be running! Let's go to our new application url and see what happens. </p>
+            <p>Great! Your application should now be running! Let's go back to the browser and visit our app URL and see what happens.</p>
             <figure>
               <heading refname="">Looks good so far</heading>
               <img
@@ -433,7 +430,7 @@ have up to 105 consecutive characters without a space. -->
 
             
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_4">Step 3. Register your application with Spotify.</heading>
+                     inline-commenting-id="cmt_4">Step 3. Register your application with Spotify.</heading>
             <p>We cannot yet authenticate because we have not registered our application with Spotify. Follow these steps to do that.</p>
 
             <ol>
