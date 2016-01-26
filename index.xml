@@ -478,10 +478,7 @@ have up to 105 consecutive characters without a space. -->
               </li>
               <li>
                 Copy and Paste the CLIENT_ID, CLIENT_SECRET, and CLIENT_ACCESS_TOKEN into config.js
-              </li>
-
-
-              <code-listing>
+                <code-listing>
                 <heading refname="config_genius">config.js</heading>
                 <pre>
                   config.genius = {
@@ -491,6 +488,7 @@ have up to 105 consecutive characters without a space. -->
                   };
                 </pre>
               </code-listing>
+              </li>
 
             </ol>
 
