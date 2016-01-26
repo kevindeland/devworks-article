@@ -253,8 +253,8 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
                 Node.js web apps.</li>
                 <li><a href="http://simplesentimentanalysis.bluemix.net/"
                        >Watson Developer Cloud</a>: Provides many SDKs that use cognitive computing to solve complex problems.</li>
-                <li><a href="https://github.com/kenshiro-o/RapGenius-JS"
-                       >RapGenius-JS module</a>: Provides a client that enables you to query genius.com (formerly rapgenius.com) and retrieve information about rap and rock artists and songs.</li>
+                <li><a href="https://github.com/kevindeland/RapGenius-JS"
+                       >RapGenius-JS module</a>: Provides a client that enables you to query genius.com (formerly rapgenius.com) and retrieve information about rap and rock artists and songs. (This repo is a slightly modified fork of the original listed <a href="https://github.com/kenshiro-o/RapGenius-JS">here</a>)</li>
               </ul>
               </li>
               <li>
@@ -444,25 +444,17 @@ have up to 105 consecutive characters without a space. -->
                           alt="Client ID and Client Secret"
                           height="244" width="108" src="SpotifyClientIDSecret.png"/>
                     </figure>
+
                     <code-listing>
-                      <heading refname="config0">config.js</heading>
+                      <heading refname="config_spotify">config.js</heading>
                       <pre>
-                        var config = {};
-
-config.watson = {
-    username: 'YOUR_USERNAME_HERE',
-    password: 'YOUR_PASSWORD_HERE',
-    version: 'v2'
-};
-
-config.spotify = {
-    client_id: 'eab51140b34a488cab959a8f75b74563', // Your client id
-    client_secret: '17232c3b0e7f4c3596c4d769f4e77589' // Your client secret
-};
-
-module.exports = config;
+                        config.spotify = {
+                        client_id: 'GET_FROM_SPOTIFY_IN_STEP_3', // Your client id
+                        client_secret: 'GET_FROM_SPOTIFY_IN_STEP_3' // Your client secret
+                        };
                       </pre>
                     </code-listing>
+
                   </li>
                 </ul>
               </li>
@@ -485,8 +477,21 @@ module.exports = config;
                 </figure>
               </li>
               <li>
-                Copy and Paste the CLIENT ID and CLIENT SECRET into [this file] <!--TODO-->
+                Copy and Paste the CLIENT_ID, CLIENT_SECRET, and CLIENT_ACCESS_TOKEN into config.js
               </li>
+
+
+              <code-listing>
+                <heading refname="config_genius">config.js</heading>
+                <pre>
+                  config.genius = {
+                  CLIENT_ID: "GET_FROM_GENIUS_IN_STEP_4",
+                  CLIENT_SECRET: "GET_FROM_GENIUS_IN_STEP_4",
+                  CLIENT_ACCESS_TOKEN: "GET_FROM_GENIUS_IN_STEP_4"
+                  };
+                </pre>
+              </code-listing>
+
             </ol>
 
 
