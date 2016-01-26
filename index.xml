@@ -493,7 +493,7 @@ have up to 105 consecutive characters without a space. -->
                   <heading refname="">Create a New API Client</heading>
                   <img
                       alt="Create a New API Client"
-                      height="244" width="108" src="GeniusNewAPI.png"/>
+                      height="244" width="400" src="GeniusNewAPI.png"/>
                 </figure>
               </li>
               <li>
@@ -516,11 +516,14 @@ have up to 105 consecutive characters without a space. -->
 
             <heading refname="" type="h2" back-to-top="no"
                      inline-commenting-id="cmt_6">Step 5. Testing Locally</heading>
-
+            <p>It is good practice to test locally before you push to the cloud. To run our app locally, try these steps:</p>
+            
             <ol>
               <li>Change to your project's root directory.</li>
               <li><code>node app.js</code></li>
               <li>Open your browser and go to <code>localhost:8888</code></li>
+              <li>Log in with your Spotify Account (using Facebook if necessary).</li>
+              <li>Choose a quiz to play, and have fun!</li>
             </ol>
 
             
@@ -536,12 +539,12 @@ have up to 105 consecutive characters without a space. -->
             <figure>
                 <heading refname="">Some songs have a lot of repetition.</heading>
                 <img
-                    alt="Neutral face icon expressing neutral sentiment for the topic                          'Syria' and the number of tweets analzyed (5)"
+                    alt="Number Nine"
                     height="242" src="number9.png" width="400"/>
             </figure>
 
             <figure>
-                <heading refname="">Hey, now here's a popular song that a lot of people know.</heading>
+                <heading refname="">Hey, now here's a popular song.</heading>
                 <img
                     alt="Hey Jude"
                     height="300" src="heyJude.png" width="600"/>
@@ -549,7 +552,7 @@ have up to 105 consecutive characters without a space. -->
 
             <heading type="h2" refname="pushing" back-to-top="no"
                      inline-commenting-id="cmt_7">Step 6: Pushing to Bluemix</heading>
-
+            <p>Finally, let's push our app to Bluemix so the world can play!</p>
             <ol>
               <li>Change to your project's root directory.</li>
               <li><code>cf push</code></li>
