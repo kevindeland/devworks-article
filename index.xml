@@ -375,11 +375,11 @@ have up to 105 consecutive characters without a space. -->
                 </figure>
               </li>
               <li>
-                Fill in the fields with the below:
+                On the right side of the page, under the <em>Add Service</em> header, ill in the fields with the below values:
                 <ul>
                   <li>Apps: select your recently created app from the drop-down box</li>
                   <li>Service Name: choose your own</li>
-                  <li>Standard Plan</li>
+                  <li>Selected Plan: Standard</li>
                 </ul>
                 <figure>
                   <heading refname="">Name the Service and Bind it to your app</heading>
@@ -494,12 +494,13 @@ module.exports = config;
             <p>Okay, now we have all the parts in place to complete your
             app. The app defaults to use three playlists: a Rock playlist, a Rap playlist, and a Beatles playlist. Follow these instructions to add your own (please don't add a playlist of your favorite ambient electronic tracks or orchestral arrangements, as they won't have lyrics).</p>
 
-            <p>To add your own Playlist, you need two fields:</p>
+            <p>To add your own Playlist, you will need two fields:</p>
             <ol>
               <li>the Spotify id of the user who owns the playlist</li>
               <li>The playlist id</li>
             </ol>
-            
+
+            <p>Follow these steps to find them:</p>
             <ol>
               <li>Go to your playlist, in the web browser or native app.</li>
               <li>
