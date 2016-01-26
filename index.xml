@@ -395,11 +395,11 @@ have up to 105 consecutive characters without a space. -->
                 </figure>
               </li>
               <li>
-                On the right side of the page, under the <em>Add Service</em> header, ill in the fields with the below values:
+                On the right side of the page, under the <em>Add Service</em> header, fill in the fields with the below values:
                 <ul>
-                  <li>Apps: select your recently created app from the drop-down box</li>
-                  <li>Service Name: choose your own</li>
-                  <li>Selected Plan: Standard</li>
+                  <li><strong>Apps</strong>: select your recently created app from the drop-down box</li>
+                  <li><strong>Service Name</strong>: choose your own</li>
+                  <li><strong>Selected Plan</strong>: Standard</li>
                 </ul>
                 <figure>
                   <heading refname="">Name the Service and Bind it to your app</heading>
@@ -409,7 +409,7 @@ have up to 105 consecutive characters without a space. -->
                 </figure>
               </li>
               <li>
-                Restage your application to allow it to bind to your new service
+                Click <strong>CREATE</strong>, then restage your application to allow it to bind to your new service
               </li>
             </ol>
             <p>Great! Your application should now be running! Let's go back to the browser and visit our app URL and see what happens.</p>
@@ -462,7 +462,7 @@ have up to 105 consecutive characters without a space. -->
                       <heading refname="">Client ID and Client Secret</heading>
                       <img
                           alt="Client ID and Client Secret"
-                          height="244" width="108" src="SpotifyClientIDSecret.png"/>
+                          height="244" width="330" src="SpotifyClientIDSecret.png"/>
                     </figure>
 
                     <code-listing>
