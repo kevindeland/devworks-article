@@ -326,7 +326,7 @@ material, you can use "watch" or "read" elements. -->
                   env:
                   NODE_ENV: development
                 </pre>
-                NOTE: You must pick a name for your app, which will help form its URL. If your app name is <i>my-watson-app</i>, then your URL will be http://my-watson-app.mybluemix.net. Remember this URL, as you will need it in a few more places.
+                NOTE: You must pick a name for your app, which will help form its URL. If your app name is my-watson-app, then your URL will be http://my-watson-app.mybluemix.net. Remember this URL, as you will need it in a few more places.
               </code-listing>
               </li>
               <li>
