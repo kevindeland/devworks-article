@@ -352,7 +352,7 @@ have up to 105 consecutive characters without a space. -->
                           
          
             <heading refname="" type="h2" back-to-top="no"
-                     inline-commenting-id="cmt_4">Step 2. Create a Watson Language Translation service, and bind your Bluemix app to it.</heading>
+                     inline-commenting-id="cmt_3">Step 2. Create a Watson Language Translation service, and bind your Bluemix app to it.</heading>
             <p>In our last step we got the code and created our Bluemix app. Now we are going to create a Watson Language Translation Service to bind to our application.</p>
 
             <ol>
@@ -410,7 +410,7 @@ have up to 105 consecutive characters without a space. -->
 
             
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_6">Step 3. Register your application with Spotify.</heading>
+                inline-commenting-id="cmt_4">Step 3. Register your application with Spotify.</heading>
             <p>We cannot yet authenticate because we have not registered our application with Spotify. Follow these steps to do that.</p>
 
             <ol>
@@ -469,7 +469,7 @@ module.exports = config;
             </ol>
 
             <heading refname="" type="h2" back-to-top="no"
-                     inline-commenting-id="cmt_7">Step 4. Register your Application with Genius.com</heading>
+                     inline-commenting-id="cmt_5">Step 4. Register your Application with Genius.com</heading>
             <p>Genius.com is a website that hosts song lyrics, as well as user-added annotations for those songs. We are going to use their API to access song lyrics, which we will then translate with Watson Language Translation. But first, we must register our Application to get an API Key. </p>
             <ol>
               <li>
@@ -492,7 +492,7 @@ module.exports = config;
 
 
             <heading refname="" type="h2" back-to-top="no"
-                     inline-commenting-id="cmt_9">Step 6. Testing Locally</heading>
+                     inline-commenting-id="cmt_6">Step 5. Testing Locally</heading>
 
             <ol>
               <li>Change to your project's root directory.</li>
@@ -525,7 +525,7 @@ module.exports = config;
             </figure>
 
             <heading type="h2" refname="pushing" back-to-top="no"
-                     inline-commenting-id="cmt_10">Step 7: Pushing to Bluemix</heading>
+                     inline-commenting-id="cmt_7">Step 6: Pushing to Bluemix</heading>
 
             <ol>
               <li>Change to your project's root directory.</li>
@@ -535,7 +535,7 @@ module.exports = config;
 
 
             <heading refname="" type="h2" back-to-top="no"
-                inline-commenting-id="cmt_8">Step 5 (Optional). Add your own playlist to the selection.</heading>
+                inline-commenting-id="cmt_8">Step 7 (Optional). Add your own playlist to the selection.</heading>
             <p>Okay, now we have all the parts in place to complete your
             app. The app defaults to use three playlists: a Rock playlist, a Rap playlist, and a Beatles playlist. Follow these instructions to add your own (please don't add a playlist of your favorite ambient electronic tracks or orchestral arrangements, as they won't have lyrics).</p>
 
@@ -567,7 +567,7 @@ module.exports = config;
             </ol>
             
             <heading type="h2" refname="conclusion" back-to-top="no"
-                     inline-commenting-id="cmt_11">Conclusion and Next Steps</heading>
+                     inline-commenting-id="cmt_9">Conclusion and Next Steps</heading>
 
             <p>The Translation Service is just one of many Watson Language Services made available on Bluemix. Which of the other Watson Services do you think we could use in conjunction with song lyrics?</p>
             <ul>
