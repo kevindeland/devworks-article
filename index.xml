@@ -202,7 +202,7 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
             <!-- PARAGRAPH 
  For authors: Every paragraph needs a beginning and ending element.
  Do not include unordered, ordered, or definition lists within a paragraph. -->
-            <p>There is a growing movement (commonly called the STEAM movement) to integrate the Arts into STEM (Science, Technology, Engineering, Math), in orer to pique the interest of those, especially kids, who would not typically be interested in STEM topics.</p>
+            <p>There is a growing movement (commonly called the STEAM movement) to integrate the Arts into STEM (Science, Technology, Engineering, Math), in orer to pique the interest of those, especially kids, who would not typically be interested in STEM topics. The Arts is a broad topic, covering music, games, dance, etc. How can we use Watson to have fun with the Arts? What if we were able to analyze song lyrics? </p>
 
 
             <!-- PULLQUOTE - OPTIONAL -->
@@ -219,7 +219,6 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
             <p>This article will give you a foundation to connect the powerful langauge processing capabilities of Watson to the songs and lyrics you love. We will start by authenticating with a Spotify account to retrieve playlists of popular songs, then fetching those song lyrics from <a href="http://genius.com">genius.com</a>, and finally using the Watson Developer Cloud to do fun and interesting things with the lyrics.</p>
 
             <p>In this installment of "Making Watson a Rock Star", we will use the Watson Language Translation service to translate the lyrics of popular songs into Spanish, to help English-speaking users improve their Spanish in a way that is fun, engaging, and memorable.</p>
-
 
             <button-block-two-column>
               <first-column>
@@ -424,7 +423,7 @@ have up to 105 consecutive characters without a space. -->
               <heading refname="">Invalid Client</heading>
               <img
                   alt="Invalid Client"
-                  height="244" src="InvalidClient.png" width="208"/>
+                  height="244" src="InvalidClient.png" width="312"/>
             </figure>
             <p>Our app is not yet registered with Spotify, causing this error. Continue to the next step to see how to fix this</p>
 
@@ -441,7 +440,7 @@ have up to 105 consecutive characters without a space. -->
                   <heading refname="">Create an App</heading>
                   <img
                       alt="Create an App"
-                      height="244" src="SpotifyCreateAnApp.png" width="208"/>
+                      height="244" src="SpotifyCreateAnApp.png" width="312"/>
                 </figure>
               </li>
               <li>
@@ -450,7 +449,7 @@ have up to 105 consecutive characters without a space. -->
                   <heading refname="">Name your App</heading>
                   <img
                       alt="Name your App"
-                      height="244" src="SpotifyNameApp.png" width="208"/>
+                      height="244" src="SpotifyNameApp.png" width="416"/>
                 </figure>
               </li>
               <li>
@@ -462,7 +461,7 @@ have up to 105 consecutive characters without a space. -->
                       <heading refname="">Client ID and Client Secret</heading>
                       <img
                           alt="Client ID and Client Secret"
-                          height="244" width="330" src="SpotifyClientIDSecret.png"/>
+                          height="244" width="440" src="SpotifyClientIDSecret.png"/>
                     </figure>
 
                     <code-listing>
