@@ -526,7 +526,7 @@ have up to 105 consecutive characters without a space. -->
 
 
             <heading refname="" type="h2" back-to-top="no"
-                     inline-commenting-id="cmt_6">Step 5. Testing Locally</heading>
+                     inline-commenting-id="cmt_6">Step 5 (Optional). Testing Locally</heading>
             <p>It is good practice to test locally before you push to the cloud. Before we run our app locally, we have to make some of our Bluemix Environment Variables available locally.</p>
             <ol>
               <li>Go to your Bluemix Dashboard.</li>
