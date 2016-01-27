@@ -527,8 +527,35 @@ have up to 105 consecutive characters without a space. -->
 
             <heading refname="" type="h2" back-to-top="no"
                      inline-commenting-id="cmt_6">Step 5. Testing Locally</heading>
-            <p>It is good practice to test locally before you push to the cloud. To run our app locally, follow these steps:</p>
-            
+            <p>It is good practice to test locally before you push to the cloud. Before we run our app locally, we have to make some of our Bluemix Environment Variables available locally.</p>
+            <ol>
+              <li>Go to your Bluemix Dashboard.</li>
+              <li>Find your app and click on it to bring up your app page.</li>
+              <li>
+                Find the Watson Language Translation Service and click "Show Credentials"
+                <figure>
+                  <heading refname="">Show Credentials</heading>
+                  <img
+                      alt="Show Credentials"
+                      height="244" width="200" src="WLTSCredentials.png"/>
+                </figure>              
+              </li>
+              <li>
+                Copy and paste the <code>username</code> and <code>password</code> into config.js
+                <code-listing>
+                  <heading refname="config_watson">config.js</heading>
+                  <pre>
+                    config.watson = {
+                    username: 'GET_FROM_BLUEMIX_IN_STEP_2',
+                    password: 'GET_FROM_BLUEMIX_IN_STEP_2',
+                    version: 'v2'
+                    };
+                  </pre>
+                </code-listing>
+              </li>
+              
+            </ol>
+            <p>After saving these changes to your code, you can test your app locally.</p>
             <ol>
               <li>Change to your project's root directory.</li>
               <li>Run <code>node app.js</code></li>
