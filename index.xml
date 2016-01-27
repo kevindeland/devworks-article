@@ -484,7 +484,9 @@ have up to 105 consecutive characters without a space. -->
                     </figure>
 
                   </li>
-
+                  <li>
+                    Click <strong>SAVE</strong> to save your changes.
+                  </li>
                 </ul>
               </li>
             </ol>
@@ -497,7 +499,7 @@ have up to 105 consecutive characters without a space. -->
                 Go to the <a href="https://genius.com/api-clients">Genius API Client Site</a>.
               </li>
               <li>
-                Fill in the APP NAME and APP WEBSITE URL fields, and click "Save".
+                Fill in the APP NAME and APP WEBSITE URL fields, and click "Save". You can leave REDIRECT URI blank because we will not be authenticating with Genius.
                 <figure>
                   <heading refname="">Create a New API Client</heading>
                   <img
@@ -525,11 +527,11 @@ have up to 105 consecutive characters without a space. -->
 
             <heading refname="" type="h2" back-to-top="no"
                      inline-commenting-id="cmt_6">Step 5. Testing Locally</heading>
-            <p>It is good practice to test locally before you push to the cloud. To run our app locally, try these steps:</p>
+            <p>It is good practice to test locally before you push to the cloud. To run our app locally, follow these steps:</p>
             
             <ol>
               <li>Change to your project's root directory.</li>
-              <li><code>node app.js</code></li>
+              <li>Run <code>node app.js</code></li>
               <li>Open your browser and go to <code>localhost:8888</code></li>
               <li>Log in with your Spotify Account (using Facebook if necessary).</li>
               <li>Choose a quiz to play, and have fun!</li>
@@ -572,7 +574,7 @@ have up to 105 consecutive characters without a space. -->
             <heading refname="" type="h2" back-to-top="no"
                 inline-commenting-id="cmt_8">Step 7 (Optional). Add your own playlist to the selection.</heading>
             <p>Okay, now we have all the parts in place to complete your
-            app. The app defaults to use three playlists: a Rock playlist, a Rap playlist, and a Beatles playlist. Follow these instructions to add your own (please don't add a playlist of your favorite ambient electronic tracks or orchestral arrangements, as they won't have lyrics).</p>
+            app. The app defaults to use three playlists: a Rock playlist, a Rap playlist, and a Beatles playlist. Follow these instructions to add your own. (Note that you are better off adding playlists with songs that have words. Apologies to all you lovers of Classical Music and ambient trance).</p>
 
             <p>To add your own Playlist, you will need two fields:</p>
             <ol>
