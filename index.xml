@@ -202,7 +202,7 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
             <!-- PARAGRAPH 
  For authors: Every paragraph needs a beginning and ending element.
  Do not include unordered, ordered, or definition lists within a paragraph. -->
-            <p>There is a growing movement (commonly called the STEAM movement) to integrate the Arts into STEM (Science, Technology, Engineering, Math), in orer to pique the interest of those, especially kids, who would not typically be interested in STEM topics. The Arts is a broad topic, covering music, games, dance, etc. How can we use Watson to have fun with the Arts? What if we were able to analyze song lyrics? </p>
+            <p>There is a growing movement (commonly called the STEAM movement) to integrate the Arts into STEM (Science, Technology, Engineering, Math), in orer to pique the interest of those, especially kids, who would not typically be interested in STEM topics. The Arts is a broad topic, covering music, games, dance, etc. How can we use Watson to have fun with the Arts? Since Watson's specialty is language, what if we were able to apply Watson to song lyrics? </p>
 
 
             <!-- PULLQUOTE - OPTIONAL -->
