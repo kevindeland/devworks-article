@@ -620,7 +620,7 @@ have up to 105 consecutive characters without a space. -->
               </li>
               
               <li>
-                Go to the angular file [public/js/quiz.js] and find the variable 'playlist_map'
+                Go to the angular file <code>public/js/quiz.js</code> and find the variable 'playlist_map'
                 <img alt="Add your own playlist here" src="addPlaylistQuizJs.png" height="300" width="500"/>
               </li>
               <li>Create a new key in the map with value having your user id and spotify id.</li>
@@ -628,7 +628,7 @@ have up to 105 consecutive characters without a space. -->
                 Go to the html file [public/index.html] and find where all the playlists are displayed.
                 <img alt="Add your own playlist here" src="addPlaylistIndexHtml.png" height="200" width="600"/>
               </li>
-              <li>add a new line, with playlistid=x, where x is the key you used in the previous 2 steps.</li>
+              <li>add a new line, with <code>playlistid=x</code>, where x is the key you used in the previous 2 steps.</li>
             </ol>
             
             <heading type="h2" refname="conclusion" back-to-top="no"
@@ -636,9 +636,9 @@ have up to 105 consecutive characters without a space. -->
 
             <p>The Translation Service is just one of many Watson Language Services made available on Bluemix. Which of the other Watson Services do you think we could use in conjunction with song lyrics?</p>
             <ul>
-              <li>Sentiment Analysis -- track the overall sentiments of songs, and then generate playlists which cater to a certain mood.</li>
-              <li>Concept Insights -- extract what concepts artists are singing about, and contrast and compare them.</li>
-              <li>Relationship Extraction (Alchemy API) -- find relationships between subjects, actions, and objects in songs, and build a database of lyrics tools to generate new songs.</li>
+              <li><strong>Sentiment Analysis</strong> -- track the overall sentiments of songs, and then generate playlists which cater to a certain mood.</li>
+              <li><strong>Concept Insights</strong> -- extract what concepts artists are singing about, and contrast and compare them.</li>
+              <li><strong>Relationship Extraction</strong> (Alchemy API) -- find relationships between subjects, actions, and objects in songs, and build a database of lyrics tools to generate new songs.</li>
             </ul>
             
 
