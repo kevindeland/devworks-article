@@ -305,10 +305,14 @@ material, you can use "watch" or "read" elements. -->
                 <p><code>git clone git@github.ibm.com:disaster-hack-cio/cuantos-caminos.git</code></p>
               </li>
               <li>
-                <code>cd</code> into your new repository
+                <code>cd YOUR_REPO_NAME</code> to change into your new repository
               </li>
               <li>
                 <code>cd authorization_code</code>
+              </li>
+              <li>
+                Rename <code>config.js.sample</code> to <code>config.js</code>
+                <p><code>mv config.js.sample config.js</code></p>
               </li>
               <li>
                 Use your preferred text editor to set your application name in the  <code>manifest.yml</code> file.               You must pick a name for your app, which will help form its URL. If your app name is <strong>my-watson-app</strong>, then your URL will be <strong>http://my-watson-app.mybluemix.net</strong>. Remember this URL, as you will need it in a few more places.
@@ -350,15 +354,16 @@ material, you can use "watch" or "read" elements. -->
 
               </li>
               <li>
-                Push your application to Bluemix using the following commands
+                We would like to create a Bluemix app, so a quick way to do this is to push our app to Bluemix from the command line, using the following commands.
                 <ul>
                   <li><code>cf api api.ng.bluemix.net</code></li>
                   <li><code>cf login</code></li>
                   <li><code>cf push</code></li>
-                  <li><code>Ctrl+C</code> to cancel the push, after you can see it has failed</li>
+                  <li>
+                    After you have seen that the step "Creating App" has completed, you can use
+                    <code>Ctrl+C</code> to cancel the push. Trying a full push will <strong>fail</strong>, because we still need to connect our app to a Watson Translation Service.
+                  </li>
                 </ul>
-
-                Note that this push should <strong>fail</strong>, because it requires connection to a Watson Translation Service.
 
               </li>
             </ol>
@@ -385,7 +390,8 @@ have up to 105 consecutive characters without a space. -->
               </li>
               <li>
                 Check the Watson checkbox on the left-hand panel to filter only the Watson services.
-                Find and click the Language Translation Service
+                Find and click the Language Translation Service.
+                Or you can go <a href="https://console.ng.bluemix.net/catalog/services/language-translation/">directly to the service page</a>.
                 <figure>
                   <heading refname="">Create a new Watson Languate Translation Service</heading>
                   <img
@@ -475,7 +481,7 @@ have up to 105 consecutive characters without a space. -->
                     </code-listing>
                   </li>
                   <li>
-                    Add two Redirect URIs: <strong>YOUR_APP_URL/callback</strong> for your Bluemix app, and <strong>http://localhost:8888</strong> for local testing.
+                    Add two Redirect URIs: <strong>http://YOUR_APP_URL/callback</strong> for your Bluemix app, and <strong>http://localhost:8888</strong> for local testing (make sure you include <code>http://</code> in your URLs). 
                     <figure>
                       <heading refname="">Redirect URIs</heading>
                       <img
@@ -496,7 +502,7 @@ have up to 105 consecutive characters without a space. -->
             <p>Genius.com is a website that hosts song lyrics, as well as user-added annotations for those songs. We are going to use their API to access song lyrics, which we will then translate with Watson Language Translation. But first, we must register our Application to get an API Key. </p>
             <ol>
               <li>
-                Go to the <a href="https://genius.com/api-clients">Genius API Client Site</a>.
+                Go to the <a href="https://genius.com/api-clients">Genius API Client Site</a>. If you do not have an account with Genius, you can log in using your Twitter, Facebook, or Google account.
               </li>
               <li>
                 Fill in the APP NAME and APP WEBSITE URL fields, and click "Save". You can leave REDIRECT URI blank because we will not be authenticating with Genius.
@@ -558,6 +564,7 @@ have up to 105 consecutive characters without a space. -->
             <p>After saving these changes to your code, you can test your app locally.</p>
             <ol>
               <li>Change to your project's root directory.</li>
+              <li>Run <code>npm install</code> to install the necessary node pacakges.</li>
               <li>Run <code>node app.js</code></li>
               <li>Open your browser and go to <code>localhost:8888</code></li>
               <li>Log in with your Spotify Account (using Facebook if necessary).</li>
@@ -627,7 +634,7 @@ have up to 105 consecutive characters without a space. -->
               </li>
               <li>Create a new key in the map with value having your user id and spotify id.</li>
               <li>
-                Go to the html file [public/index.html] and find where all the playlists are displayed.
+                Go to the html file <code>public/index.html</code> and find where all the playlists are displayed.
                 <img alt="Add your own playlist here" src="addPlaylistIndexHtml.png" height="200" width="600"/>
               </li>
               <li>add a new line, with <code>playlistid=x</code>, where x is the key you used in the previous 2 steps.</li>
