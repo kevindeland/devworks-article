@@ -216,7 +216,7 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
             </pullquote>
 
 
-            <p>This article will give you a foundation to connect the powerful langauge processing capabilities of Watson to the songs and lyrics you love. We will start by authenticating with a Spotify account to retrieve playlists of popular songs, then fetching those song lyrics from <a href="http://genius.com">genius.com</a>, and finally using the Watson Developer Cloud to do fun and interesting things with the lyrics.</p>
+            <p>This article will give you a foundation to connect the powerful langauge processing capabilities of Watson to the songs and lyrics you love. We will start by authenticating with a Spotify account to retrieve playlists of popular songs, then fetching those song lyrics from <a href="http://genius.com" target="_blank">genius.com</a>, and finally using the Watson Developer Cloud to do fun and interesting things with the lyrics.</p>
 
             <p>In this installment of "Making Watson a Rock Star", we will use the Watson Language Translation service to translate the lyrics of popular songs into Spanish, to help English-speaking users improve their Spanish in a way that is fun, engaging, and memorable.</p>
 
@@ -243,16 +243,16 @@ string multiple articles together in an easy-to-consume set, if necessary.-->
             <ol>
               <li>A Bluemix account</li>
               <li>A basic familiarity with <a
-              href="http://www.ibm.com/developerworks/library/j-nodejs/index.html"
+              href="http://www.ibm.com/developerworks/library/j-nodejs/index.html" target="_blank"
               >Node.js</a> and a Node.js development environment.</li>
               <li>These Node.js modules:
               <ul>
-                <li><a href="https://github.com/visionmedia/express"
+                <li><a href="https://github.com/visionmedia/express" target="_blank"
                        >Express framework</a>: Makes it easy to build
                 Node.js web apps.</li>
-                <li><a href="http://simplesentimentanalysis.bluemix.net/"
+                <li><a href="http://simplesentimentanalysis.bluemix.net/" target="_blank"
                        >Watson Developer Cloud</a>: Provides many SDKs that use cognitive computing to solve complex problems.</li>
-                <li><a href="https://github.com/kevindeland/RapGenius-JS"
+                <li><a href="https://github.com/kevindeland/RapGenius-JS" target="_blank"
                        >RapGenius-JS module</a>: Provides a client that enables you to query genius.com (formerly rapgenius.com) and retrieve information about rap and rock artists and songs. (This repo is a slightly modified fork of the original listed <a href="https://github.com/kenshiro-o/RapGenius-JS">here</a>)</li>
               </ul>
               </li>
