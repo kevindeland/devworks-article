@@ -13,10 +13,13 @@
 
         <meta-last-updated month="01" day="28" year="2016" initials="corbinm@us.ibm.com"/>
 
+        <content-area-primary name="cognitive"/>
+
         <!--<content-area-secondary name="rational"/>-->
 
 
-        <!--<title>Placeholder Title</title> -->
+        <title>Making Watson a rockstar: Test your Spanish language knowledge with
+            translated song lyrics</title>
         <subtitle>Integrating IBM Watson Translation Service on Bluemix with Spotify
             and Genius.com</subtitle>
 
